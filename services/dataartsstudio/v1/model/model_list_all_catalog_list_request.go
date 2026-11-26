@@ -24,10 +24,10 @@ type ListAllCatalogListRequest struct {
 	// 目录编号。
 	CatalogId string `json:"catalog_id"`
 
-	// 查询起始坐标, 即跳过前X条数据。
+	// 查询起始坐标，即跳过前X条数据。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询条数, 即查询Y条数据。
+	// 查询条数，即查询Y条数据。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

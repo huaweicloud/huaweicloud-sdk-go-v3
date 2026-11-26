@@ -26,8 +26,11 @@ type ShowInstanceNamespaceResponse struct {
 	// 镜像数量
 	RepoCount *int32 `json:"repo_count,omitempty"`
 
-	CveAllowlist   *CveAllowlist `json:"cve_allowlist,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	CveAllowlist *CveAllowlist `json:"cve_allowlist,omitempty"`
+
+	// 标签列表
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowInstanceNamespaceResponse) String() string {

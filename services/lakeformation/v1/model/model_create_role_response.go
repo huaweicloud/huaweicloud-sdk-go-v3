@@ -20,7 +20,13 @@ type CreateRoleResponse struct {
 
 	// 主体来源 IAM云用户 SAML联邦 LDAP ld用户 LOCAL 本地用户 AGENTTENANT 委托 OTHER 其它
 	PrincipalSource *CreateRoleResponsePrincipalSource `json:"principal_source,omitempty"`
-	HttpStatusCode  int                                `json:"-"`
+
+	// 用户端角色id，创建时指定，不可修改。
+	ExternalRoleId *string `json:"external_role_id,omitempty"`
+
+	// 参数。
+	Parameters     map[string]string `json:"parameters,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateRoleResponse) String() string {

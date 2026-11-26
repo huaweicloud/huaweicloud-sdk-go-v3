@@ -22,7 +22,7 @@ type VersionDetail struct {
 	// 版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
 	Updated string `json:"updated"`
 
-	// 若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+	// 若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
 	MinVersion string `json:"min_version"`
 }
 

@@ -21,13 +21,13 @@ type SearchBindApiRequest struct {
 	// 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
 	ContentType string `json:"Content-Type"`
 
-	// app编号。
+	// APP编号。
 	AppId string `json:"app_id"`
 
-	// 查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+	// 查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询条数, 即查询Y条数据。
+	// 查询条数，即查询Y条数据。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

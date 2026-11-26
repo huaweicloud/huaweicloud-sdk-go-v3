@@ -725,6 +725,22 @@ func (i *ShowRepoTagInvoker) Invoke() (*model.ShowRepoTagResponse, error) {
 	}
 }
 
+type ShowRepoTagConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepoTagConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepoTagConfigInvoker) Invoke() (*model.ShowRepoTagConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepoTagConfigResponse), nil
+	}
+}
+
 type ShowRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2181,6 +2197,22 @@ func (i *ListNamespaceTagsInvoker) Invoke() (*model.ListNamespaceTagsResponse, e
 	}
 }
 
+type ListResourcesTagsByProjectIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesTagsByProjectIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourcesTagsByProjectIdInvoker) Invoke() (*model.ListResourcesTagsByProjectIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesTagsByProjectIdResponse), nil
+	}
+}
+
 type ListSubResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2290,6 +2322,22 @@ func (i *ShowInstanceArtifactAdditionInvoker) Invoke() (*model.ShowInstanceArtif
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceArtifactAdditionResponse), nil
+	}
+}
+
+type ShowInstanceArtifactManifestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactManifestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactManifestInvoker) Invoke() (*model.ShowInstanceArtifactManifestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceArtifactManifestResponse), nil
 	}
 }
 
@@ -2466,6 +2514,22 @@ func (i *ShowInstanceSignPolicyInvoker) Invoke() (*model.ShowInstanceSignPolicyR
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceSignPolicyResponse), nil
+	}
+}
+
+type ShowInstanceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceTagInvoker) Invoke() (*model.ShowInstanceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceTagResponse), nil
 	}
 }
 

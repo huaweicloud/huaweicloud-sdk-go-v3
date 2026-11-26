@@ -8,8 +8,8 @@ import (
 
 // GetPolicyV5Response Response Object
 type GetPolicyV5Response struct {
-	Policy         *Policy `json:"policy,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Policy         *PolicyWithTags `json:"policy,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o GetPolicyV5Response) String() string {

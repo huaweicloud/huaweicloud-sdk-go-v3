@@ -15,7 +15,7 @@ import (
 
 type ImportDataServiceExcelRequestBody struct {
 
-	// 导入包含api的excel文件，大小必须小于4MB。
+	// 导入包含API的EXCEL文件，大小必须小于4MB。
 	File *def.FilePart `json:"file"`
 }
 

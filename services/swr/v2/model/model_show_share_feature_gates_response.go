@@ -44,7 +44,19 @@ type ShowShareFeatureGatesResponse struct {
 
 	// 是否启用镜像配额
 	EnableImageQuota *bool `json:"enable_image_quota,omitempty"`
-	HttpStatusCode   int   `json:"-"`
+
+	// 是否支持展示镜像签名关系
+	EnableCosignSignature *bool `json:"enable_cosign_signature,omitempty"`
+
+	// 是否支持展示跳转到企业版的链接
+	EnableEnterpriseEditionLink *bool `json:"enable_enterprise_edition_link,omitempty"`
+
+	// 是否支持自定义有效期
+	EnableCustomizeValidityPeriod *bool `json:"enable_customize_validity_period,omitempty"`
+
+	// swr-utils工具下载链接地址
+	SwrUtilDownloadUrl *string `json:"swr_util_download_url,omitempty"`
+	HttpStatusCode     int     `json:"-"`
 }
 
 func (o ShowShareFeatureGatesResponse) String() string {

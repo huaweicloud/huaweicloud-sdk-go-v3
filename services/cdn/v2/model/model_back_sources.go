@@ -6,23 +6,29 @@ import (
 	"strings"
 )
 
-// BackSources 高级回源信息源站配置。
+// BackSources **参数解释：** 高级回源信息源站配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type BackSources struct {
 
-	// 源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+	// **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
 	SourcesType string `json:"sources_type"`
 
-	// 源站IP或者域名。
+	// **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	IpOrDomain string `json:"ip_or_domain"`
 
-	// OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
+	// **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
 	ObsBucketType *string `json:"obs_bucket_type,omitempty"`
 
-	// HTTP端口，取值范围：1-65535。
+	// **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
 	HttpPort *int32 `json:"http_port,omitempty"`
 
-	// HTTPS端口，取值范围：1-65535。
+	// **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
 	HttpsPort *int32 `json:"https_port,omitempty"`
+
+	// **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+	OriginProtocol *string `json:"origin_protocol,omitempty"`
+
+	// **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+	HostName *string `json:"host_name,omitempty"`
 }
 
 func (o BackSources) String() string {

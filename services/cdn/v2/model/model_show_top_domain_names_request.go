@@ -18,13 +18,13 @@ type ShowTopDomainNamesRequest struct {
 	// - 统计类型 - 目前只支持bw（带宽），flux（流量），req_num（请求总数）
 	StatType string `json:"stat_type"`
 
-	// **参数解释：** 服务范围 **约束限制：** 当查询回源类指标时，该参数无效 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** - mainland_china：中国大陆
+	// **参数解释：** 服务范围 **约束限制：** 当查询回源类指标时，该参数无效 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** - mainland_china：中国大陆
 	ServiceArea *string `json:"service_area,omitempty"`
 
 	// **参数解释：** top域名查询数量 **约束限制：** 不涉及 **取值范围：** 0-500 **默认取值：** 20
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释：** 企业项目id > 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id  **约束限制：** - 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目 - 当使用子账号调用接口时，该参数必传 **取值范围：** all表示所有项目 **默认取值：** 不涉及
+	// **参数解释：** 企业项目id > 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id  **约束限制：** - 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目 - 当使用子账号调用接口时，该参数必传  **取值范围：** all表示所有项目 **默认取值：** 不涉及
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

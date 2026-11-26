@@ -49,6 +49,15 @@ type LakeFormationPolicy struct {
 
 	// 授权路径列表
 	AuthorizationPaths *[]string `json:"authorization_paths,omitempty"`
+
+	// 权限策略类型：DEFAULT-普通策略、ROW_FILTER-行过滤权限策略、DATA_MASK-列掩码权限策略。
+	AccessPolicyType *LakeFormationPolicyAccessPolicyType `json:"access_policy_type,omitempty"`
+
+	// OBS Access Label, 描述了该条LakeFormation权限
+	ObsAccessLabel *string `json:"obs_access_label,omitempty"`
+
+	// 参数。
+	Parameters map[string]string `json:"parameters,omitempty"`
 }
 
 func (o LakeFormationPolicy) String() string {
@@ -438,6 +447,57 @@ func (c LakeFormationPolicyGrantAblePermissions) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LakeFormationPolicyGrantAblePermissions) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LakeFormationPolicyAccessPolicyType struct {
+	value string
+}
+
+type LakeFormationPolicyAccessPolicyTypeEnum struct {
+	DEFAULT    LakeFormationPolicyAccessPolicyType
+	ROW_FILTER LakeFormationPolicyAccessPolicyType
+	DATA_MASK  LakeFormationPolicyAccessPolicyType
+}
+
+func GetLakeFormationPolicyAccessPolicyTypeEnum() LakeFormationPolicyAccessPolicyTypeEnum {
+	return LakeFormationPolicyAccessPolicyTypeEnum{
+		DEFAULT: LakeFormationPolicyAccessPolicyType{
+			value: "DEFAULT",
+		},
+		ROW_FILTER: LakeFormationPolicyAccessPolicyType{
+			value: "ROW_FILTER",
+		},
+		DATA_MASK: LakeFormationPolicyAccessPolicyType{
+			value: "DATA_MASK",
+		},
+	}
+}
+
+func (c LakeFormationPolicyAccessPolicyType) Value() string {
+	return c.value
+}
+
+func (c LakeFormationPolicyAccessPolicyType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LakeFormationPolicyAccessPolicyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

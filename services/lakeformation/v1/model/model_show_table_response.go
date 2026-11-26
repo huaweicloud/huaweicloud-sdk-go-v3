@@ -73,7 +73,7 @@ type ShowTableResponse struct {
 	// 表ID
 	TableId *string `json:"table_id,omitempty"`
 
-	// 表状态，0表示正常，1表示删除中，2表示已删除，3表示恢复中，4表示清除中，其余值为元数据更新、创建、异常等中间状态
+	// 表状态，0表示正常，1表示删除中，2表示已删除，3表示恢复中，4表示清除中，5~13表示元数据更新、创建、失败、异常等中间状态
 	TableStatus *int32 `json:"table_status,omitempty"`
 
 	// 用户端表id，创建时指定，不可修改

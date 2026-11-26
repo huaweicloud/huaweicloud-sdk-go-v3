@@ -21,7 +21,7 @@ type ShowDomainCountryStatResponse struct {
 	// **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
 	StatType *string `json:"stat_type,omitempty"`
 
-	// **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+	// **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
 	Result         map[string]interface{} `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

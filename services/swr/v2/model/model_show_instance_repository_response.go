@@ -37,8 +37,11 @@ type ShowInstanceRepositoryResponse struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间
-	UpdatedAt      *string `json:"updated_at,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 标签列表
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowInstanceRepositoryResponse) String() string {

@@ -47,7 +47,7 @@ type ShowReposTagRespV3 struct {
 	// 镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
 	Updated string `json:"updated"`
 
-	// 帐号ID
+	// 账号ID
 	DomainId string `json:"domain_id"`
 
 	// 0：manifest类型；1：manifest list类型

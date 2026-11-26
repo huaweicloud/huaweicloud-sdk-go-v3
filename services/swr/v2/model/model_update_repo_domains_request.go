@@ -21,7 +21,7 @@ type UpdateRepoDomainsRequest struct {
 	// 镜像仓库名称
 	Repository string `json:"repository"`
 
-	// 共享帐号
+	// 共享账号
 	AccessDomain string `json:"access_domain"`
 
 	Body *UpdateRepoDomainsRequestBody `json:"body,omitempty"`

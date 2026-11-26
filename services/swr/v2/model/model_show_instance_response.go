@@ -48,7 +48,7 @@ type ShowInstanceResponse struct {
 	// 实例过期时间
 	ExpiresAt *string `json:"expires_at,omitempty"`
 
-	// 实例状态
+	// 实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
 	Status *ShowInstanceResponseStatus `json:"status,omitempty"`
 
 	// obs桶名称
@@ -83,7 +83,10 @@ type ShowInstanceResponse struct {
 
 	// 实例对应的VPC终端节点服务ID
 	VpcepServiceId *string `json:"vpcep_service_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// 标签列表
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {
@@ -143,10 +146,14 @@ type ShowInstanceResponseStatus struct {
 }
 
 type ShowInstanceResponseStatusEnum struct {
-	INITIAL     ShowInstanceResponseStatus
-	CREATING    ShowInstanceResponseStatus
-	RUNNING     ShowInstanceResponseStatus
-	UNAVAILABLE ShowInstanceResponseStatus
+	INITIAL               ShowInstanceResponseStatus
+	CREATING              ShowInstanceResponseStatus
+	RUNNING               ShowInstanceResponseStatus
+	UNAVAILABLE           ShowInstanceResponseStatus
+	FROZEN                ShowInstanceResponseStatus
+	DEPLOYMENT_ABNORMAL   ShowInstanceResponseStatus
+	PARTIALLY_UNAVAILABLE ShowInstanceResponseStatus
+	CORE_DIAL_FAILED      ShowInstanceResponseStatus
 }
 
 func GetShowInstanceResponseStatusEnum() ShowInstanceResponseStatusEnum {
@@ -162,6 +169,18 @@ func GetShowInstanceResponseStatusEnum() ShowInstanceResponseStatusEnum {
 		},
 		UNAVAILABLE: ShowInstanceResponseStatus{
 			value: "Unavailable",
+		},
+		FROZEN: ShowInstanceResponseStatus{
+			value: "Frozen",
+		},
+		DEPLOYMENT_ABNORMAL: ShowInstanceResponseStatus{
+			value: "DeploymentAbnormal",
+		},
+		PARTIALLY_UNAVAILABLE: ShowInstanceResponseStatus{
+			value: "PartiallyUnavailable",
+		},
+		CORE_DIAL_FAILED: ShowInstanceResponseStatus{
+			value: "CoreDialFailed",
 		},
 	}
 }

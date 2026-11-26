@@ -187,9 +187,9 @@ func (c *SwrClient) CreateRepoInvoker(request *model.CreateRepoRequest) *CreateR
 	return &CreateRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRepoDomains 创建共享帐号
+// CreateRepoDomains 创建共享账号
 //
-// 创建共享帐号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
+// 创建共享账号。镜像上传后，您可以共享私有镜像给其他账号，并授予下载该镜像的权限。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (*model.CreateRepoDomainsResponse, error) {
@@ -202,7 +202,7 @@ func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (
 	}
 }
 
-// CreateRepoDomainsInvoker 创建共享帐号
+// CreateRepoDomainsInvoker 创建共享账号
 func (c *SwrClient) CreateRepoDomainsInvoker(request *model.CreateRepoDomainsRequest) *CreateRepoDomainsInvoker {
 	requestDef := GenReqDefForCreateRepoDomains()
 	return &CreateRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -397,9 +397,9 @@ func (c *SwrClient) DeleteRepoInvoker(request *model.DeleteRepoRequest) *DeleteR
 	return &DeleteRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteRepoDomains 删除共享帐号
+// DeleteRepoDomains 删除共享账号
 //
-// 删除共享帐号
+// 删除共享账号
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (*model.DeleteRepoDomainsResponse, error) {
@@ -412,7 +412,7 @@ func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (
 	}
 }
 
-// DeleteRepoDomainsInvoker 删除共享帐号
+// DeleteRepoDomainsInvoker 删除共享账号
 func (c *SwrClient) DeleteRepoDomainsInvoker(request *model.DeleteRepoDomainsRequest) *DeleteRepoDomainsInvoker {
 	requestDef := GenReqDefForDeleteRepoDomains()
 	return &DeleteRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -628,9 +628,9 @@ func (c *SwrClient) ListRepoDetailsInvoker(request *model.ListRepoDetailsRequest
 	return &ListRepoDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRepoDomains 获取共享帐号列表
+// ListRepoDomains 获取共享账号列表
 //
-// 获取共享帐号列表
+// 获取共享账号列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*model.ListRepoDomainsResponse, error) {
@@ -643,7 +643,7 @@ func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*mod
 	}
 }
 
-// ListRepoDomainsInvoker 获取共享帐号列表
+// ListRepoDomainsInvoker 获取共享账号列表
 func (c *SwrClient) ListRepoDomainsInvoker(request *model.ListRepoDomainsRequest) *ListRepoDomainsInvoker {
 	requestDef := GenReqDefForListRepoDomains()
 	return &ListRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -838,7 +838,7 @@ func (c *SwrClient) ListTriggersDetailsInvoker(request *model.ListTriggersDetail
 	return &ListTriggersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAccessDomain 判断共享帐号是否存在
+// ShowAccessDomain 判断共享账号是否存在
 //
 // 判断共享租户是否存在
 //
@@ -853,7 +853,7 @@ func (c *SwrClient) ShowAccessDomain(request *model.ShowAccessDomainRequest) (*m
 	}
 }
 
-// ShowAccessDomainInvoker 判断共享帐号是否存在
+// ShowAccessDomainInvoker 判断共享账号是否存在
 func (c *SwrClient) ShowAccessDomainInvoker(request *model.ShowAccessDomainRequest) *ShowAccessDomainInvoker {
 	requestDef := GenReqDefForShowAccessDomain()
 	return &ShowAccessDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -962,6 +962,27 @@ func (c *SwrClient) ShowRepoTag(request *model.ShowRepoTagRequest) (*model.ShowR
 func (c *SwrClient) ShowRepoTagInvoker(request *model.ShowRepoTagRequest) *ShowRepoTagInvoker {
 	requestDef := GenReqDefForShowRepoTag()
 	return &ShowRepoTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepoTagConfig 获取镜像的Config信息
+//
+// 获取镜像的Config信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowRepoTagConfig(request *model.ShowRepoTagConfigRequest) (*model.ShowRepoTagConfigResponse, error) {
+	requestDef := GenReqDefForShowRepoTagConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepoTagConfigResponse), nil
+	}
+}
+
+// ShowRepoTagConfigInvoker 获取镜像的Config信息
+func (c *SwrClient) ShowRepoTagConfigInvoker(request *model.ShowRepoTagConfigRequest) *ShowRepoTagConfigInvoker {
+	requestDef := GenReqDefForShowRepoTagConfig()
+	return &ShowRepoTagConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRepository 查询镜像仓库概要信息
@@ -1132,9 +1153,9 @@ func (c *SwrClient) UpdateRepoInvoker(request *model.UpdateRepoRequest) *UpdateR
 	return &UpdateRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateRepoDomains 更新共享帐号
+// UpdateRepoDomains 更新共享账号
 //
-// 更新共享帐号
+// 更新共享账号
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (*model.UpdateRepoDomainsResponse, error) {
@@ -1147,7 +1168,7 @@ func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (
 	}
 }
 
-// UpdateRepoDomainsInvoker 更新共享帐号
+// UpdateRepoDomainsInvoker 更新共享账号
 func (c *SwrClient) UpdateRepoDomainsInvoker(request *model.UpdateRepoDomainsRequest) *UpdateRepoDomainsInvoker {
 	requestDef := GenReqDefForUpdateRepoDomains()
 	return &UpdateRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2875,6 +2896,27 @@ func (c *SwrClient) ListNamespaceTagsInvoker(request *model.ListNamespaceTagsReq
 	return &ListNamespaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListResourcesTagsByProjectId 查询某种资源类型的标签列表
+//
+// 查询某种资源类型的标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListResourcesTagsByProjectId(request *model.ListResourcesTagsByProjectIdRequest) (*model.ListResourcesTagsByProjectIdResponse, error) {
+	requestDef := GenReqDefForListResourcesTagsByProjectId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesTagsByProjectIdResponse), nil
+	}
+}
+
+// ListResourcesTagsByProjectIdInvoker 查询某种资源类型的标签列表
+func (c *SwrClient) ListResourcesTagsByProjectIdInvoker(request *model.ListResourcesTagsByProjectIdRequest) *ListResourcesTagsByProjectIdInvoker {
+	requestDef := GenReqDefForListResourcesTagsByProjectId()
+	return &ListResourcesTagsByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubResourceInstances 按照标签检索子资源列表
 //
 // 按照标签检索子资源列表
@@ -3020,6 +3062,27 @@ func (c *SwrClient) ShowInstanceArtifactAddition(request *model.ShowInstanceArti
 func (c *SwrClient) ShowInstanceArtifactAdditionInvoker(request *model.ShowInstanceArtifactAdditionRequest) *ShowInstanceArtifactAdditionInvoker {
 	requestDef := GenReqDefForShowInstanceArtifactAddition()
 	return &ShowInstanceArtifactAdditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceArtifactManifest 获取制品Manifest信息
+//
+// 获取制品的Manifest信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowInstanceArtifactManifest(request *model.ShowInstanceArtifactManifestRequest) (*model.ShowInstanceArtifactManifestResponse, error) {
+	requestDef := GenReqDefForShowInstanceArtifactManifest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceArtifactManifestResponse), nil
+	}
+}
+
+// ShowInstanceArtifactManifestInvoker 获取制品Manifest信息
+func (c *SwrClient) ShowInstanceArtifactManifestInvoker(request *model.ShowInstanceArtifactManifestRequest) *ShowInstanceArtifactManifestInvoker {
+	requestDef := GenReqDefForShowInstanceArtifactManifest()
+	return &ShowInstanceArtifactManifestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceConfiguration 查看实例配置
@@ -3251,6 +3314,27 @@ func (c *SwrClient) ShowInstanceSignPolicy(request *model.ShowInstanceSignPolicy
 func (c *SwrClient) ShowInstanceSignPolicyInvoker(request *model.ShowInstanceSignPolicyRequest) *ShowInstanceSignPolicyInvoker {
 	requestDef := GenReqDefForShowInstanceSignPolicy()
 	return &ShowInstanceSignPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTag 获取制品的Tag信息
+//
+// 获取制品的Tag信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowInstanceTag(request *model.ShowInstanceTagRequest) (*model.ShowInstanceTagResponse, error) {
+	requestDef := GenReqDefForShowInstanceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceTagResponse), nil
+	}
+}
+
+// ShowInstanceTagInvoker 获取制品的Tag信息
+func (c *SwrClient) ShowInstanceTagInvoker(request *model.ShowInstanceTagRequest) *ShowInstanceTagInvoker {
+	requestDef := GenReqDefForShowInstanceTag()
+	return &ShowInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceWebhook 获取触发器详情

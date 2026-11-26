@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -31,8 +30,23 @@ type UpdateCatalogResponse struct {
 	OwnerType *UpdateCatalogResponseOwnerType `json:"owner_type,omitempty"`
 
 	// 所有者来源,IAM-云用户,SAML-联邦,LDAP-ld用户,LOCAL-本地用户,AGENTTENANT-委托,OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
-	OwnerSource    *UpdateCatalogResponseOwnerSource `json:"owner_source,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	OwnerSource *UpdateCatalogResponseOwnerSource `json:"owner_source,omitempty"`
+
+	// catalogID。
+	CatalogId *string `json:"catalog_id,omitempty"`
+
+	// catalog元数据创建时间。
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
+	// catalog类型，可选值为DEFAULT（代表默认的元数据类型）、CLICKHOUSE（代表CH类型），不设置时默认为DEFAULT。 创建时指定，不可修改。
+	Type *UpdateCatalogResponseType `json:"type,omitempty"`
+
+	// catalog元数据最后一次修改时间。
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+
+	// 版本ID
+	VersionId      *string `json:"version_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateCatalogResponse) String() string {
@@ -140,6 +154,53 @@ func (c UpdateCatalogResponseOwnerSource) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateCatalogResponseOwnerSource) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateCatalogResponseType struct {
+	value string
+}
+
+type UpdateCatalogResponseTypeEnum struct {
+	DEFAULT    UpdateCatalogResponseType
+	CLICKHOUSE UpdateCatalogResponseType
+}
+
+func GetUpdateCatalogResponseTypeEnum() UpdateCatalogResponseTypeEnum {
+	return UpdateCatalogResponseTypeEnum{
+		DEFAULT: UpdateCatalogResponseType{
+			value: "DEFAULT",
+		},
+		CLICKHOUSE: UpdateCatalogResponseType{
+			value: "CLICKHOUSE",
+		},
+	}
+}
+
+func (c UpdateCatalogResponseType) Value() string {
+	return c.value
+}
+
+func (c UpdateCatalogResponseType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateCatalogResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

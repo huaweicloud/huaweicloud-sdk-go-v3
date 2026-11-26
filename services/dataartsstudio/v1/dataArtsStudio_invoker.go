@@ -2677,6 +2677,22 @@ func (i *ListDataArtsStudioInstancesInvoker) Invoke() (*model.ListDataArtsStudio
 	}
 }
 
+type ListDataServiceApproversInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataServiceApproversInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDataServiceApproversInvoker) Invoke() (*model.ListDataServiceApproversResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataServiceApproversResponse), nil
+	}
+}
+
 type ListDataServiceInstanceAccesslogsInvoker struct {
 	*invoker.BaseInvoker
 }

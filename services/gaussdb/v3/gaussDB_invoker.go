@@ -2683,22 +2683,6 @@ func (i *ShowLtsConfigsInvoker) Invoke() (*model.ShowLtsConfigsResponse, error) 
 	}
 }
 
-type ShowMigrateInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMigrateInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMigrateInfoInvoker) Invoke() (*model.ShowMigrateInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMigrateInfoResponse), nil
-	}
-}
-
 type ShowMultiTenantInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -18,7 +18,7 @@ type ShowAccessDomainResponse struct {
 	// 镜像仓库名称
 	Repository *string `json:"repository,omitempty"`
 
-	// 共享帐号名
+	// 共享账号名
 	AccessDomain *string `json:"access_domain,omitempty"`
 
 	// 权限

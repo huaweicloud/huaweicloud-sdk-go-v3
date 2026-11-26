@@ -581,6 +581,38 @@ func (i *CreateAlgorithmVersionToGalleryInvoker) Invoke() (*model.CreateAlgorith
 	}
 }
 
+type CreateAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssetInvoker) Invoke() (*model.CreateAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetResponse), nil
+	}
+}
+
+type CreateAssetFileDownLoadPathInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetFileDownLoadPathInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssetFileDownLoadPathInvoker) Invoke() (*model.CreateAssetFileDownLoadPathResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetFileDownLoadPathResponse), nil
+	}
+}
+
 type CreateAuthGrantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -994,6 +1026,22 @@ func (i *DeleteAlgorithmInvoker) Invoke() (*model.DeleteAlgorithmResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteAlgorithmResponse), nil
+	}
+}
+
+type DeleteAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssetInvoker) Invoke() (*model.DeleteAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetResponse), nil
 	}
 }
 
@@ -1634,6 +1682,54 @@ func (i *ListAllHyperinstancesInvoker) Invoke() (*model.ListAllHyperinstancesRes
 		return nil, err
 	} else {
 		return result.(*model.ListAllHyperinstancesResponse), nil
+	}
+}
+
+type ListAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetInvoker) Invoke() (*model.ListAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetResponse), nil
+	}
+}
+
+type ListAssetFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetFileInvoker) Invoke() (*model.ListAssetFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetFileResponse), nil
+	}
+}
+
+type ListAssetOperationRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetOperationRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetOperationRecordsInvoker) Invoke() (*model.ListAssetOperationRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetOperationRecordsResponse), nil
 	}
 }
 
@@ -2725,6 +2821,86 @@ func (i *ShowAlgorithmByUuidInvoker) Invoke() (*model.ShowAlgorithmByUuidRespons
 	}
 }
 
+type ShowAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssetInvoker) Invoke() (*model.ShowAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetResponse), nil
+	}
+}
+
+type ShowAssetByCodeAndVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetByCodeAndVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssetByCodeAndVersionInvoker) Invoke() (*model.ShowAssetByCodeAndVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetByCodeAndVersionResponse), nil
+	}
+}
+
+type ShowAssetExtendMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetExtendMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssetExtendMessageInvoker) Invoke() (*model.ShowAssetExtendMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetExtendMessageResponse), nil
+	}
+}
+
+type ShowAssetResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssetResourceInvoker) Invoke() (*model.ShowAssetResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetResourceResponse), nil
+	}
+}
+
+type ShowAssetTagsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetTagsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssetTagsInfoInvoker) Invoke() (*model.ShowAssetTagsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetTagsInfoResponse), nil
+	}
+}
+
 type ShowAuthGrantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3762,6 +3938,22 @@ func (i *UnbindInferApiKeyInvoker) Invoke() (*model.UnbindInferApiKeyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UnbindInferApiKeyResponse), nil
+	}
+}
+
+type UpdateAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAssetInvoker) Invoke() (*model.UpdateAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssetResponse), nil
 	}
 }
 

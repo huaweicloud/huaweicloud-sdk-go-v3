@@ -9,7 +9,7 @@ import (
 // ShowStatsConfigsRequest Request Object
 type ShowStatsConfigsRequest struct {
 
-	// **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+	// **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
 	ConfigType int32 `json:"config_type"`
 
 	// **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10

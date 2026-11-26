@@ -45,6 +45,12 @@ type ShowInstanceArtifactResponse struct {
 	// 制品版本的Tag列表
 	Tags *[]ArtifactTag `json:"tags,omitempty"`
 
+	// 制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+	ExtraAttrs map[string]interface{} `json:"extra_attrs,omitempty"`
+
+	// 当制品为多架构镜像索引时，显示其引用的所有子制品。
+	References *[]Reference `json:"references,omitempty"`
+
 	// 制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
 	ScanOverview   map[string]NativeReportSummary `json:"scan_overview,omitempty"`
 	HttpStatusCode int                            `json:"-"`

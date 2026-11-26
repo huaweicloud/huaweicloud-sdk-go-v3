@@ -21,7 +21,7 @@ type ShowMessageDetailRequest struct {
 	// 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
 	ContentType string `json:"Content-Type"`
 
-	// 消息信息id。
+	// 消息信息ID。
 	MessageId string `json:"message_id"`
 }
 

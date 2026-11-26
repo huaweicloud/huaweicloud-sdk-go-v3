@@ -61,10 +61,10 @@ type ScheduledEvent struct {
 	// **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
 	NodeName string `json:"nodeName"`
 
-	// **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+	// **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
 	InstanceType ScheduledEventInstanceType `json:"instanceType"`
 
-	// **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+	// **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
 	UnderLyingInstanceId *string `json:"underLyingInstanceId,omitempty"`
 
 	// **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。

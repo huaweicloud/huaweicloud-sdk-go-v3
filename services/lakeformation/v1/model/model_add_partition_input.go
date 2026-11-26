@@ -14,6 +14,9 @@ type AddPartitionInput struct {
 
 	// 添加的分区信息
 	Partitions []PartitionInput `json:"partitions"`
+
+	// 是否使用表的列作为分区中的列。默认为false
+	UseTableColumn *bool `json:"use_table_column,omitempty"`
 }
 
 func (o AddPartitionInput) String() string {

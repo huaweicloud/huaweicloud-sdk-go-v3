@@ -35,6 +35,9 @@ type TableMeta struct {
 
 	// 分区列的信息。
 	PartitionKeys *[]Column `json:"partition_keys,omitempty"`
+
+	// 用户端表id，创建时指定，不可修改。
+	ExternalTableId *string `json:"external_table_id,omitempty"`
 }
 
 func (o TableMeta) String() string {

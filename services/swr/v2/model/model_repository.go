@@ -37,6 +37,9 @@ type Repository struct {
 
 	// 更新时间
 	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o Repository) String() string {

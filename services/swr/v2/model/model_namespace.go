@@ -26,6 +26,9 @@ type Namespace struct {
 	RepoCount *int32 `json:"repo_count,omitempty"`
 
 	CveAllowlist *CveAllowlist `json:"cve_allowlist,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o Namespace) String() string {

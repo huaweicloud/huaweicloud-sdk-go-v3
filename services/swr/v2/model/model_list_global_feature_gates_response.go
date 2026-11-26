@@ -20,7 +20,16 @@ type ListGlobalFeatureGatesResponse struct {
 
 	// 是否展示创建内网访问的开关按钮
 	EnableIntranetAccessSwitch *bool `json:"enableIntranetAccessSwitch,omitempty"`
-	HttpStatusCode             int   `json:"-"`
+
+	// 是否支持Console侧的一键委托
+	EnableConsoleAgency *bool `json:"enableConsoleAgency,omitempty"`
+
+	// 是否支持IAM新平面的信任委托
+	EnableV5CustomAgency *bool `json:"enableV5CustomAgency,omitempty"`
+
+	// 委托名称
+	AgencyName     *string `json:"agencyName,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListGlobalFeatureGatesResponse) String() string {

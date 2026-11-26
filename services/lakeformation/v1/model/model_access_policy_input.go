@@ -34,6 +34,12 @@ type AccessPolicyInput struct {
 
 	// 列掩码
 	DataMask *string `json:"data_mask,omitempty"`
+
+	// data mask type：REDACT修订， HASH哈希加密，PARTIAL_MASK部分掩码，NULLIFY用NULL值替换原值，UNMASKED原样显示，DATA_ONLY_SHOW_YEAR仅显示日期字符串的年份部分，CUSTOM自定义脱敏规则。
+	DataMaskType *AccessPolicyInputDataMaskType `json:"data_mask_type,omitempty"`
+
+	// 参数。
+	Parameters map[string]string `json:"parameters,omitempty"`
 }
 
 func (o AccessPolicyInput) String() string {
@@ -305,6 +311,73 @@ func (c AccessPolicyInputGrantAblePermissions) MarshalJSON() ([]byte, error) {
 }
 
 func (c *AccessPolicyInputGrantAblePermissions) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type AccessPolicyInputDataMaskType struct {
+	value string
+}
+
+type AccessPolicyInputDataMaskTypeEnum struct {
+	REDACT              AccessPolicyInputDataMaskType
+	HASH                AccessPolicyInputDataMaskType
+	PARTIAL_MASK        AccessPolicyInputDataMaskType
+	NULLIFY             AccessPolicyInputDataMaskType
+	UNMASKED            AccessPolicyInputDataMaskType
+	DATA_ONLY_SHOW_YEAR AccessPolicyInputDataMaskType
+	CUSTOM              AccessPolicyInputDataMaskType
+}
+
+func GetAccessPolicyInputDataMaskTypeEnum() AccessPolicyInputDataMaskTypeEnum {
+	return AccessPolicyInputDataMaskTypeEnum{
+		REDACT: AccessPolicyInputDataMaskType{
+			value: "REDACT",
+		},
+		HASH: AccessPolicyInputDataMaskType{
+			value: "HASH",
+		},
+		PARTIAL_MASK: AccessPolicyInputDataMaskType{
+			value: "PARTIAL_MASK",
+		},
+		NULLIFY: AccessPolicyInputDataMaskType{
+			value: "NULLIFY",
+		},
+		UNMASKED: AccessPolicyInputDataMaskType{
+			value: "UNMASKED",
+		},
+		DATA_ONLY_SHOW_YEAR: AccessPolicyInputDataMaskType{
+			value: "DATA_ONLY_SHOW_YEAR",
+		},
+		CUSTOM: AccessPolicyInputDataMaskType{
+			value: "CUSTOM",
+		},
+	}
+}
+
+func (c AccessPolicyInputDataMaskType) Value() string {
+	return c.value
+}
+
+func (c AccessPolicyInputDataMaskType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AccessPolicyInputDataMaskType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

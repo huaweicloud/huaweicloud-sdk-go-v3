@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// FlexibleOrigins 灵活回源信息,最多20条。
+// FlexibleOrigins **参数解释：** 高级回源，实现根据不同的资源类型或路径回源到不同源站 **约束限制：** 最多配置20条
 type FlexibleOrigins struct {
 
-	// URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
+	// **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
 	MatchType string `json:"match_type"`
 
-	// file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-	MatchPattern string `json:"match_pattern"`
+	// **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+	MatchPattern *string `json:"match_pattern,omitempty"`
 
-	// 优先级取值范围为1-100，数值越大优先级越高。
+	// **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
 	Priority int32 `json:"priority"`
 
-	// 回源信息。  > 每个目录的回源源站数量不超过1个。
+	// **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
 	BackSources []BackSources `json:"back_sources"`
 }
 

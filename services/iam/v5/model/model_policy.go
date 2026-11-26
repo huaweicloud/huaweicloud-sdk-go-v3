@@ -37,9 +37,6 @@ type Policy struct {
 
 	// 身份策略默认版本最近一次的更新时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
-
-	// 身份策略标签列表。
-	Tags []Tag `json:"tags"`
 }
 
 func (o Policy) String() string {

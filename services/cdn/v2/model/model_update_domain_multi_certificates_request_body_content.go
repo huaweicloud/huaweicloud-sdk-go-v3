@@ -6,40 +6,43 @@ import (
 	"strings"
 )
 
-// UpdateDomainMultiCertificatesRequestBodyContent https配置。
+// UpdateDomainMultiCertificatesRequestBodyContent **参数解释：** HTTPS证书配置，配置证书后，允许客户端采用HTTPS协议访问CDN节点 **约束限制：** 不涉及
 type UpdateDomainMultiCertificatesRequestBodyContent struct {
 
-	// 域名列表,逗号分割，上限50个域名
+	// **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
 	DomainName string `json:"domain_name"`
 
-	// https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
+	// **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
 	HttpsSwitch int32 `json:"https_switch"`
 
-	// 回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
+	// **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
 	AccessOriginWay *int32 `json:"access_origin_way,omitempty"`
 
-	// 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+	// **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
 	ForceRedirectHttps *int32 `json:"force_redirect_https,omitempty"`
 
 	ForceRedirectConfig *ForceRedirect `json:"force_redirect_config,omitempty"`
 
-	// http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
+	// **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
 	Http2 *int32 `json:"http2,omitempty"`
 
-	// 证书名称（设置证书必填）（长度限制为3-64字符）。
+	// **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
 	CertName *string `json:"cert_name,omitempty"`
 
-	// HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+	// **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
 	Certificate *string `json:"certificate,omitempty"`
 
-	// HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+	// **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
 	PrivateKey *string `json:"private_key,omitempty"`
 
-	// 证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+	// **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
 	CertificateType *int32 `json:"certificate_type,omitempty"`
 
-	// SCM证书id
+	// **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ScmCertificateId *string `json:"scm_certificate_id,omitempty"`
+
+	// **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
+	Certificates *[]MultiCertificateBatchVo `json:"certificates,omitempty"`
 }
 
 func (o UpdateDomainMultiCertificatesRequestBodyContent) String() string {

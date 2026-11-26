@@ -47,7 +47,7 @@ type Instance struct {
 	// 实例过期时间
 	ExpiresAt *string `json:"expires_at,omitempty"`
 
-	// 实例状态
+	// 实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
 	Status *InstanceStatus `json:"status,omitempty"`
 
 	// obs桶名称
@@ -82,6 +82,9 @@ type Instance struct {
 
 	// 实例对应的VPC终端节点服务ID
 	VpcepServiceId *string `json:"vpcep_service_id,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o Instance) String() string {
@@ -141,10 +144,14 @@ type InstanceStatus struct {
 }
 
 type InstanceStatusEnum struct {
-	INITIAL     InstanceStatus
-	CREATING    InstanceStatus
-	RUNNING     InstanceStatus
-	UNAVAILABLE InstanceStatus
+	INITIAL               InstanceStatus
+	CREATING              InstanceStatus
+	RUNNING               InstanceStatus
+	UNAVAILABLE           InstanceStatus
+	FROZEN                InstanceStatus
+	DEPLOYMENT_ABNORMAL   InstanceStatus
+	PARTIALLY_UNAVAILABLE InstanceStatus
+	CORE_DIAL_FAILED      InstanceStatus
 }
 
 func GetInstanceStatusEnum() InstanceStatusEnum {
@@ -160,6 +167,18 @@ func GetInstanceStatusEnum() InstanceStatusEnum {
 		},
 		UNAVAILABLE: InstanceStatus{
 			value: "Unavailable",
+		},
+		FROZEN: InstanceStatus{
+			value: "Frozen",
+		},
+		DEPLOYMENT_ABNORMAL: InstanceStatus{
+			value: "DeploymentAbnormal",
+		},
+		PARTIALLY_UNAVAILABLE: InstanceStatus{
+			value: "PartiallyUnavailable",
+		},
+		CORE_DIAL_FAILED: InstanceStatus{
+			value: "CoreDialFailed",
 		},
 	}
 }

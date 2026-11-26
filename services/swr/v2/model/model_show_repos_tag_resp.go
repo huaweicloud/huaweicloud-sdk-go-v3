@@ -50,7 +50,7 @@ type ShowReposTagResp struct {
 	// 镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
 	Deleted string `json:"deleted"`
 
-	// 帐号ID
+	// 账号ID
 	DomainId string `json:"domain_id"`
 
 	// 镜像是否被扫描过

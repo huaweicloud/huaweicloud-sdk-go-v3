@@ -14,6 +14,12 @@ type RoleInput struct {
 
 	// 描述信息
 	Description *string `json:"description,omitempty"`
+
+	// 用户端角色id，创建时指定，不可修改。
+	ExternalRoleId *string `json:"external_role_id,omitempty"`
+
+	// 参数。
+	Parameters map[string]string `json:"parameters,omitempty"`
 }
 
 func (o RoleInput) String() string {

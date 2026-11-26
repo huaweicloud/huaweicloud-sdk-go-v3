@@ -785,6 +785,50 @@ func (c *ModelArtsClient) CreateAlgorithmVersionToGalleryInvoker(request *model.
 	return &CreateAlgorithmVersionToGalleryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAsset 创建资产
+//
+// 创建资产接口用于在ModelArts平台上创建一个新的资产，支持创建独立资产或基于父资产派生新版本，并支持加入已有资产组进行版本管理。
+// 该接口适用于以下场景：当用户需要将自定义模型、数据集、算子等资产上传至平台并进行统一管理时，可以通过此接口创建资产。使用该接口的前提条件是用户已具备项目访问权限，并已准备好资产的元数据信息及存储路径。平台将在校验资产类型、版本唯一性及数据合法性后，将资产添加到资产列表中并返回资产ID。若资产信息不完整、版本冲突或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateAsset(request *model.CreateAssetRequest) (*model.CreateAssetResponse, error) {
+	requestDef := GenReqDefForCreateAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetResponse), nil
+	}
+}
+
+// CreateAssetInvoker 创建资产
+func (c *ModelArtsClient) CreateAssetInvoker(request *model.CreateAssetRequest) *CreateAssetInvoker {
+	requestDef := GenReqDefForCreateAsset()
+	return &CreateAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAssetFileDownLoadPath 获取资产文件临时下载路径
+//
+// 获取资产文件临时下载路径接口用于在ModelArts平台上为指定资产生成临时签名的文件下载路径。
+// 该接口适用于以下场景：当用户需要下载资产关联的文件资源时，可以通过此接口获取临时有效的下载链接。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的ID。若资产不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateAssetFileDownLoadPath(request *model.CreateAssetFileDownLoadPathRequest) (*model.CreateAssetFileDownLoadPathResponse, error) {
+	requestDef := GenReqDefForCreateAssetFileDownLoadPath()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetFileDownLoadPathResponse), nil
+	}
+}
+
+// CreateAssetFileDownLoadPathInvoker 获取资产文件临时下载路径
+func (c *ModelArtsClient) CreateAssetFileDownLoadPathInvoker(request *model.CreateAssetFileDownLoadPathRequest) *CreateAssetFileDownLoadPathInvoker {
+	requestDef := GenReqDefForCreateAssetFileDownLoadPath()
+	return &CreateAssetFileDownLoadPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAuthGrant 一键授权或重置授权
 //
 // 一键授权或重置授权接口用于一键创建ModelArts委托授权或重置已有委托。该接口适用于以下场景：当用户首次使用ModelArts服务需要开通委托授权时，或当现有委托授权出现异常、过期需要重新配置时，可通过此接口一键完成授权操作。使用该接口的前提条件是用户已登录系统且具有相应的操作权限。执行一键授权后，系统将自动创建委托授权关系；执行重置操作后，原有委托将被替换为新的授权。若用户无权限操作或服务异常，接口将返回相应的错误信息。
@@ -1339,6 +1383,28 @@ func (c *ModelArtsClient) DeleteAlgorithm(request *model.DeleteAlgorithmRequest)
 func (c *ModelArtsClient) DeleteAlgorithmInvoker(request *model.DeleteAlgorithmRequest) *DeleteAlgorithmInvoker {
 	requestDef := GenReqDefForDeleteAlgorithm()
 	return &DeleteAlgorithmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAsset 删除资产
+//
+// 删除资产接口用于在ModelArts平台上删除指定的资产，支持通过forceDelete参数对数据集类型资产进行强制删除。
+// 该接口适用于以下场景：当用户需要清理不再使用的资产或释放存储资源时，可以通过此接口进行删除。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的ID。平台将在校验资产存在性、归属权限及使用状态后执行禁用删除操作并返回资产ID。若资产不存在、为预置资产不可删除、模型资产仍在使用中或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteAsset(request *model.DeleteAssetRequest) (*model.DeleteAssetResponse, error) {
+	requestDef := GenReqDefForDeleteAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetResponse), nil
+	}
+}
+
+// DeleteAssetInvoker 删除资产
+func (c *ModelArtsClient) DeleteAssetInvoker(request *model.DeleteAssetRequest) *DeleteAssetInvoker {
+	requestDef := GenReqDefForDeleteAsset()
+	return &DeleteAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAuthorizations 删除授权
@@ -2185,6 +2251,72 @@ func (c *ModelArtsClient) ListAllHyperinstances(request *model.ListAllHyperinsta
 func (c *ModelArtsClient) ListAllHyperinstancesInvoker(request *model.ListAllHyperinstancesRequest) *ListAllHyperinstancesInvoker {
 	requestDef := GenReqDefForListAllHyperinstances()
 	return &ListAllHyperinstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAsset 查询资产列表
+//
+// 查询资产列表接口用于在ModelArts平台上查询指定项目下的资产列表。
+// 该接口适用于以下场景：当用户需要在资产管理浏览、检索和管理资产时，可以通过此接口按需筛选所需资产。使用该接口的前提条件是用户已具备项目访问权限。平台将根据传入的查询条件返回符合条件的资产详情列表及总数。若请求参数格式错误或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListAsset(request *model.ListAssetRequest) (*model.ListAssetResponse, error) {
+	requestDef := GenReqDefForListAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetResponse), nil
+	}
+}
+
+// ListAssetInvoker 查询资产列表
+func (c *ModelArtsClient) ListAssetInvoker(request *model.ListAssetRequest) *ListAssetInvoker {
+	requestDef := GenReqDefForListAsset()
+	return &ListAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssetFile 查询数据集文件列表
+//
+// 查询数据集文件列表接口用于在ModelArts平台上获取指定资产关联的文件列表信息。
+// 该接口适用于以下场景：当用户需要浏览或检索某一资产下的文件资源时，可以通过此接口分页查询文件列表。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的ID。若资产不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListAssetFile(request *model.ListAssetFileRequest) (*model.ListAssetFileResponse, error) {
+	requestDef := GenReqDefForListAssetFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetFileResponse), nil
+	}
+}
+
+// ListAssetFileInvoker 查询数据集文件列表
+func (c *ModelArtsClient) ListAssetFileInvoker(request *model.ListAssetFileRequest) *ListAssetFileInvoker {
+	requestDef := GenReqDefForListAssetFile()
+	return &ListAssetFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssetOperationRecords 查询资产操作记录列表
+//
+// 查询资产操作记录列表接口用于在ModelArts平台上分页查询资产的操作记录信息。
+// 该接口适用于以下场景：当用户需要检索和审计资产的操作执行历史时，可以通过此接口按多种条件筛选并分页查询操作记录。使用该接口的前提条件是用户已具备项目访问权限。若用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListAssetOperationRecords(request *model.ListAssetOperationRecordsRequest) (*model.ListAssetOperationRecordsResponse, error) {
+	requestDef := GenReqDefForListAssetOperationRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetOperationRecordsResponse), nil
+	}
+}
+
+// ListAssetOperationRecordsInvoker 查询资产操作记录列表
+func (c *ModelArtsClient) ListAssetOperationRecordsInvoker(request *model.ListAssetOperationRecordsRequest) *ListAssetOperationRecordsInvoker {
+	requestDef := GenReqDefForListAssetOperationRecords()
+	return &ListAssetOperationRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDevServerFlavors 查询规格列表
@@ -3622,6 +3754,116 @@ func (c *ModelArtsClient) ShowAlgorithmByUuidInvoker(request *model.ShowAlgorith
 	return &ShowAlgorithmByUuidInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAsset 查询资产详情
+//
+// 查询资产详情接口用于在ModelArts平台上获取指定资产的详细信息。
+// 该接口适用于以下场景：当用户需要查看某个资产的完整元数据、存储位置、支持的操作及扩展信息时，可以通过此接口获取。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的ID。平台将根据资产ID查询并返回资产的详情信息。若资产不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAsset(request *model.ShowAssetRequest) (*model.ShowAssetResponse, error) {
+	requestDef := GenReqDefForShowAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetResponse), nil
+	}
+}
+
+// ShowAssetInvoker 查询资产详情
+func (c *ModelArtsClient) ShowAssetInvoker(request *model.ShowAssetRequest) *ShowAssetInvoker {
+	requestDef := GenReqDefForShowAsset()
+	return &ShowAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetByCodeAndVersion 通过asset code 和asset version查询资产详情
+//
+// 通过资产编码和版本查询资产详情接口用于在ModelArts平台上根据asset_code和版本asset_version查询指定资产的详细信息。
+// 该接口适用于以下场景：当用户已知资产编码和版本但无资产ID时，可以通过此接口获取资产的完整详情及可执行操作。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的编码和版本号。平台将根据资产编码和版本查询并返回资产的详情信息。若资产不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAssetByCodeAndVersion(request *model.ShowAssetByCodeAndVersionRequest) (*model.ShowAssetByCodeAndVersionResponse, error) {
+	requestDef := GenReqDefForShowAssetByCodeAndVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetByCodeAndVersionResponse), nil
+	}
+}
+
+// ShowAssetByCodeAndVersionInvoker 通过asset code 和asset version查询资产详情
+func (c *ModelArtsClient) ShowAssetByCodeAndVersionInvoker(request *model.ShowAssetByCodeAndVersionRequest) *ShowAssetByCodeAndVersionInvoker {
+	requestDef := GenReqDefForShowAssetByCodeAndVersion()
+	return &ShowAssetByCodeAndVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetExtendMessage 查询README中的yaml内容
+//
+// 查询资产扩展信息接口用于在ModelArts平台上获取指定资产README文件中的YAML内容。
+// 该接口适用于以下场景：当用户需要查看预置资产的扩展元数据信息时，可以通过此接口解析README中的YAML片段并返回。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产ID。平台将根据资产ID读取对应README文件，解析其中的YAML内容后以JSON格式返回。若资产不存在、资产非预置资产、README文件未找到或用户无权限操作，接口将返回相应的错误信息或空数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAssetExtendMessage(request *model.ShowAssetExtendMessageRequest) (*model.ShowAssetExtendMessageResponse, error) {
+	requestDef := GenReqDefForShowAssetExtendMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetExtendMessageResponse), nil
+	}
+}
+
+// ShowAssetExtendMessageInvoker 查询README中的yaml内容
+func (c *ModelArtsClient) ShowAssetExtendMessageInvoker(request *model.ShowAssetExtendMessageRequest) *ShowAssetExtendMessageInvoker {
+	requestDef := GenReqDefForShowAssetExtendMessage()
+	return &ShowAssetExtendMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetResource 查询资产管理resource、doc目录下的内容
+//
+// 查询资产资源接口用于在ModelArts平台上获取指定资产中resource、doc等目录下的资源文件内容，如说明文档、芯片配置等。
+// 该接口适用于以下场景：当用户需要查看资产的附加文档、配置文件或其他静态资源时，可以通过此接口按资源名称获取对应内容。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产ID及资源文件名称。平台将根据资产ID和资源名称读取对应文件，并按文件类型自动返回相应的内容格式。若资产不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAssetResource(request *model.ShowAssetResourceRequest) (*model.ShowAssetResourceResponse, error) {
+	requestDef := GenReqDefForShowAssetResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetResourceResponse), nil
+	}
+}
+
+// ShowAssetResourceInvoker 查询资产管理resource、doc目录下的内容
+func (c *ModelArtsClient) ShowAssetResourceInvoker(request *model.ShowAssetResourceRequest) *ShowAssetResourceInvoker {
+	requestDef := GenReqDefForShowAssetResource()
+	return &ShowAssetResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetTagsInfo 查询tag列表信息
+//
+// 查询tag列表信息接口用于在ModelArts平台上查询tag列表信息。
+// 该接口适用于以下场景：当用户需要获取某一标签分类下所有标签的层级结构及详细信息时，可以通过此接口查询完整的标签树数据。使用该接口的前提条件是用户已具备项目访问权限，并已知目标标签的类型名称。平台将根据标签类型从对象存储中查询并返回对应的标签树形结构信息，支持多语言展示。若标签资源不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAssetTagsInfo(request *model.ShowAssetTagsInfoRequest) (*model.ShowAssetTagsInfoResponse, error) {
+	requestDef := GenReqDefForShowAssetTagsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetTagsInfoResponse), nil
+	}
+}
+
+// ShowAssetTagsInfoInvoker 查询tag列表信息
+func (c *ModelArtsClient) ShowAssetTagsInfoInvoker(request *model.ShowAssetTagsInfoRequest) *ShowAssetTagsInfoInvoker {
+	requestDef := GenReqDefForShowAssetTagsInfo()
+	return &ShowAssetTagsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAuthGrant 查询委托授权状态
 //
 // 查询委托授权状态接口用于查询ModelArts服务的委托授权是否已开通。该接口适用于以下场景：当用户需要确认是否已开通ModelArts委托授权以进行后续操作（如模型训练、部署等）时，可通过此接口查询当前授权状态。使用该接口的前提条件是用户已登录系统且具有相应的查询权限。查询结果将返回委托授权的当前状态（已开通或未开通），若用户无权限查询或服务异常，接口将返回相应的错误信息。
@@ -4993,6 +5235,28 @@ func (c *ModelArtsClient) UnbindInferApiKey(request *model.UnbindInferApiKeyRequ
 func (c *ModelArtsClient) UnbindInferApiKeyInvoker(request *model.UnbindInferApiKeyRequest) *UnbindInferApiKeyInvoker {
 	requestDef := GenReqDefForUnbindInferApiKey()
 	return &UnbindInferApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAsset 更新资产
+//
+// 更新资产接口用于在ModelArts平台上修改指定资产的属性信息，包括资产名称、描述、系列、能力、启用状态、标签及自定义属性等。
+// 该接口适用于以下场景：当用户需要修改已有资产的元数据信息或调整资产状态时，可以通过此接口进行更新。使用该接口的前提条件是用户已具备项目访问权限，并已知目标资产的ID。平台将在校验资产存在性及归属权限后将更新应用到目标资产及其同组资产上。若资产不存在、为预置资产不可修改或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) UpdateAsset(request *model.UpdateAssetRequest) (*model.UpdateAssetResponse, error) {
+	requestDef := GenReqDefForUpdateAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssetResponse), nil
+	}
+}
+
+// UpdateAssetInvoker 更新资产
+func (c *ModelArtsClient) UpdateAssetInvoker(request *model.UpdateAssetRequest) *UpdateAssetInvoker {
+	requestDef := GenReqDefForUpdateAsset()
+	return &UpdateAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAuthMode 更新授权模式

@@ -62,6 +62,12 @@ type CreateTableInput struct {
 	DataStatisticEnable *bool `json:"data_statistic_enable,omitempty"`
 
 	CreateOpenTableFormatInput *CreateOpenTableFormatInput `json:"create_open_table_format_input,omitempty"`
+
+	// 用户端表id，创建时指定，不可修改。
+	ExternalTableId *string `json:"external_table_id,omitempty"`
+
+	// 所有者来源：IAM-云用户、SAML-联邦、LDAP-ld用户、LOCAL-本地用户、AGENTTENANT-委托、OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
+	OwnerAuthSourceType *CreateTableInputOwnerAuthSourceType `json:"owner_auth_source_type,omitempty"`
 }
 
 func (o CreateTableInput) String() string {
@@ -224,6 +230,69 @@ func (c CreateTableInputOwnerType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateTableInputOwnerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateTableInputOwnerAuthSourceType struct {
+	value string
+}
+
+type CreateTableInputOwnerAuthSourceTypeEnum struct {
+	IAM         CreateTableInputOwnerAuthSourceType
+	SAML        CreateTableInputOwnerAuthSourceType
+	LDAP        CreateTableInputOwnerAuthSourceType
+	LOCAL       CreateTableInputOwnerAuthSourceType
+	AGENTTENANT CreateTableInputOwnerAuthSourceType
+	OTHER       CreateTableInputOwnerAuthSourceType
+}
+
+func GetCreateTableInputOwnerAuthSourceTypeEnum() CreateTableInputOwnerAuthSourceTypeEnum {
+	return CreateTableInputOwnerAuthSourceTypeEnum{
+		IAM: CreateTableInputOwnerAuthSourceType{
+			value: "IAM",
+		},
+		SAML: CreateTableInputOwnerAuthSourceType{
+			value: "SAML",
+		},
+		LDAP: CreateTableInputOwnerAuthSourceType{
+			value: "LDAP",
+		},
+		LOCAL: CreateTableInputOwnerAuthSourceType{
+			value: "LOCAL",
+		},
+		AGENTTENANT: CreateTableInputOwnerAuthSourceType{
+			value: "AGENTTENANT",
+		},
+		OTHER: CreateTableInputOwnerAuthSourceType{
+			value: "OTHER",
+		},
+	}
+}
+
+func (c CreateTableInputOwnerAuthSourceType) Value() string {
+	return c.value
+}
+
+func (c CreateTableInputOwnerAuthSourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateTableInputOwnerAuthSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

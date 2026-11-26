@@ -32,6 +32,21 @@ type Partition struct {
 	Parameters map[string]string `json:"parameters"`
 
 	StorageDescriptor *StorageDescriptor `json:"storage_descriptor"`
+
+	// catalogID。
+	CatalogId *string `json:"catalog_id,omitempty"`
+
+	// 数据库ID。
+	DatabaseId *string `json:"database_id,omitempty"`
+
+	// 分区ID。
+	PartitionId *string `json:"partition_id,omitempty"`
+
+	// 表ID。
+	TableId *string `json:"table_id,omitempty"`
+
+	// 更新时间
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 
 func (o Partition) String() string {

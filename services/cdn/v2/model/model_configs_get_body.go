@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ConfigsGetBody 配置项。
+// ConfigsGetBody **参数解释：** 域名配置项，包含业务类型、服务范围、源站配置、缓存规则、HTTPS证书等配置信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type ConfigsGetBody struct {
 
 	// 业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
@@ -15,13 +15,13 @@ type ConfigsGetBody struct {
 	// 服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
 	ServiceArea *string `json:"service_area,omitempty"`
 
-	// 域名备注。
+	// **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	Remark *string `json:"remark,omitempty"`
 
-	// 回源请求头配置
+	// 回源请求头配置。
 	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
 
-	// http header配置
+	// http header配置。
 	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty"`
 
 	UrlAuth *UrlAuthGetBody `json:"url_auth,omitempty"`
@@ -70,7 +70,7 @@ type ConfigsGetBody struct {
 	// 回源是否校验ETag，on：开启，off：关闭。
 	SliceEtagStatus *string `json:"slice_etag_status,omitempty"`
 
-	// 回源超时时间，单位：秒。
+	// **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	OriginReceiveTimeout *int32 `json:"origin_receive_timeout,omitempty"`
 
 	RemoteAuth *CommonRemoteAuth `json:"remote_auth,omitempty"`
@@ -79,7 +79,6 @@ type ConfigsGetBody struct {
 
 	VideoSeek *VideoSeek `json:"video_seek,omitempty"`
 
-	// 请求限速。
 	RequestLimitRules *[]RequestLimitRules `json:"request_limit_rules,omitempty"`
 
 	IpFrequencyLimit *IpFrequencyLimitQuery `json:"ip_frequency_limit,omitempty"`
@@ -107,6 +106,8 @@ type ConfigsGetBody struct {
 
 	// **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
 	FlowLimitStrategy *[]FlowLimitStrategy `json:"flow_limit_strategy,omitempty"`
+
+	BandwidthAlarmStrategy *BandwidthAlarmStrategy `json:"bandwidth_alarm_strategy,omitempty"`
 }
 
 func (o ConfigsGetBody) String() string {

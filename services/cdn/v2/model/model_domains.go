@@ -12,10 +12,10 @@ import (
 // Domains 域名信息
 type Domains struct {
 
-	// 加速域名ID。
+	// **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	Id *string `json:"id,omitempty"`
 
-	// 加速域名。
+	// **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	DomainName *string `json:"domain_name,omitempty"`
 
 	// 域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
@@ -24,7 +24,7 @@ type Domains struct {
 	// 加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
 	DomainStatus *string `json:"domain_status,omitempty"`
 
-	// 加速域名对应的CNAME。
+	// **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	Cname *string `json:"cname,omitempty"`
 
 	// 源站配置。
@@ -35,10 +35,10 @@ type Domains struct {
 	// 是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
 	HttpsStatus *int32 `json:"https_status,omitempty"`
 
-	// 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+	// **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+	// **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	ModifyTime *int64 `json:"modify_time,omitempty"`
 
 	// 封禁状态（0代表未禁用；1代表禁用）。
@@ -62,17 +62,20 @@ type Domains struct {
 	// 是否暂停源站回源。取值意义： - on：开启 - off：关闭
 	OriginStatus *string `json:"origin_status,omitempty"`
 
-	// 域名禁用原因。
+	// **参数解释：** 域名禁用原因。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	BannedReason *string `json:"banned_reason,omitempty"`
 
-	// 域名锁定原因。
+	// **参数解释：** 域名锁定原因。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	LockedReason *string `json:"locked_reason,omitempty"`
 
-	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+	// **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签信息。
 	Tags *[]EpResourceTag `json:"tags,omitempty"`
+
+	// **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+	OriginProtocol *string `json:"origin_protocol,omitempty"`
 }
 
 func (o Domains) String() string {

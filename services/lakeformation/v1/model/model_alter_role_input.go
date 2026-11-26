@@ -14,6 +14,12 @@ type AlterRoleInput struct {
 
 	// 角色名称。只能包含字母、数字和下划线，且长度为1~255个字符。
 	RoleName string `json:"role_name"`
+
+	// 用户端角色id，创建时指定，不可修改。
+	ExternalRoleId *string `json:"external_role_id,omitempty"`
+
+	// 参数。
+	Parameters map[string]string `json:"parameters,omitempty"`
 }
 
 func (o AlterRoleInput) String() string {

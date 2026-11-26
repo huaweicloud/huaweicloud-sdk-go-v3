@@ -15,7 +15,7 @@ type ExportTask struct {
 	// **参数解释：** 导出任务名称 **取值范围：** 不涉及
 	TaskName *string `json:"task_name,omitempty"`
 
-	// **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+	// **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释：** 下载链接 **取值范围：** 不涉及

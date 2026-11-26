@@ -39,8 +39,26 @@ type ShowFunctionResponse struct {
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 函数地址信息
-	ResourceUris   *[]FunctionResourceUri `json:"resource_uris,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	ResourceUris *[]FunctionResourceUri `json:"resource_uris,omitempty"`
+
+	// catalogID。
+	CatalogId *string `json:"catalog_id,omitempty"`
+
+	// 数据库ID。
+	DatabaseId *string `json:"database_id,omitempty"`
+
+	// 函数ID。
+	FunctionId *string `json:"function_id,omitempty"`
+
+	// 参数
+	Parameters map[string]string `json:"parameters,omitempty"`
+
+	// 函数元数据最后一次修改时间。
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+
+	// 版本ID
+	VersionId      *string `json:"version_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowFunctionResponse) String() string {

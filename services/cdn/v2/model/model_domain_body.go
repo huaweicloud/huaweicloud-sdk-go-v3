@@ -9,23 +9,28 @@ import (
 	"strings"
 )
 
-// DomainBody 创建域名Body
+// DomainBody **参数解释：** 创建域名请求体，包含创建域名所需参数 **约束限制：** 不涉及
 type DomainBody struct {
 
-	// **参数解释：** 需要添加到CDN控制台加速的域名 > 添加泛域名后，该泛域名所有次级域名均默认接入CDN加速。  **约束限制：** 加速域名不允许重复添加 **取值范围：** - 域名长度不能超过200个字符 - 支持大小写字母、数字、\"-\"、\".\"，首尾字符不能是\"-\"或\".\" - 泛域名场景下支持\"*\"，且\"*\"必须为首字符 - 域名单节点长度不超过63个字符，即：xxx.xxx.com中，xxx的字符数不超过63个字符  **默认取值：** 不涉及
+	// **参数解释：** 加速域名 > 添加泛域名后，该泛域名所有次级域名默认支持CDN加速  **约束限制：** 加速域名不允许重复添加 **取值范围：** - 域名长度不能超过200个字符 - 支持大小写字母、数字、\"-\"、\".\"，首尾字符不能是\"-\"或\".\" - 泛域名场景下支持\"\\*\"，且\"\\*必须为首字符 - 域名单节点长度不超过63个字符，即：\\*\\*\\*.\\*\\*\\*.com中，\\*\\*\\*的字符数不超过63个字符  **默认取值：** 不涉及
 	DomainName string `json:"domain_name"`
 
-	// 域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
+	// **参数解释：** 域名业务类型 **约束限制：** 不涉及 **取值范围：** - web: 网页加速 - download: 文件下载加速 - video: 点播加速 - wholeSite: 全站加速  **默认取值：** 不涉及
 	BusinessType DomainBodyBusinessType `json:"business_type"`
 
-	// 源站配置。
+	// **参数解释：** 源站配置 **约束限制：** 不涉及
 	Sources []SourcesRequestBody `json:"sources"`
 
-	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
+	// **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
 	ServiceArea *DomainBodyServiceArea `json:"service_area,omitempty"`
 
-	// 当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+	// **参数解释：** 企业项目id。您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id **约束限制：** 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目  **取值范围：** 不涉及 **默认取值：** 不涉及
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+	OriginProtocol *string `json:"origin_protocol,omitempty"`
+
+	Configs *CreateDomainConfigs `json:"configs,omitempty"`
 }
 
 func (o DomainBody) String() string {

@@ -25,6 +25,9 @@ type ShowInstanceReplicationPolicyResponse struct {
 	// 目标命名空间名，默认为空值
 	DestNamespace *string `json:"dest_namespace,omitempty"`
 
+	// 在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
+	DestNamespaceReplaceCount *int32 `json:"dest_namespace_replace_count,omitempty"`
+
 	// 源资源过滤器
 	Filters *[]Filter `json:"filters,omitempty"`
 

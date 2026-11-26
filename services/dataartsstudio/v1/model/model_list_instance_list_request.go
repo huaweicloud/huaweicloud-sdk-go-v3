@@ -21,22 +21,22 @@ type ListInstanceListRequest struct {
 	// 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
 	ContentType string `json:"Content-Type"`
 
-	// api编号。
+	// API编号。
 	ApiId string `json:"api_id"`
 
-	// api操作。
+	// API操作。
 	Action ListInstanceListRequestAction `json:"action"`
 
-	// 全部展示(包括不可执行当前操作的实例)。
+	// 全部展示（包括不可执行当前操作的实例）。
 	ShowAll *bool `json:"show_all,omitempty"`
 
-	// 校验api状态。
+	// 校验API状态。
 	CheckStatus *bool `json:"check_status,omitempty"`
 
-	// 校验api调试状态。
+	// 校验API调试状态。
 	CheckDebug *bool `json:"check_debug,omitempty"`
 
-	// app编号(用于判断授权操作app可选的实例)。
+	// APP编号（用于判断授权操作APP可选的实例）。
 	AppId *string `json:"app_id,omitempty"`
 
 	// limit。

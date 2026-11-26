@@ -38,6 +38,9 @@ type ResourceInput struct {
 
 	// 数据集名称。
 	Dataset *string `json:"dataset,omitempty"`
+
+	// 模型名称。
+	Model *string `json:"model,omitempty"`
 }
 
 func (o ResourceInput) String() string {

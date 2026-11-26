@@ -14,6 +14,9 @@ type CatalogInfo struct {
 
 	// catalog名
 	Name string `json:"name"`
+
+	// 子模型信息。
+	Models *[]ModelInfo `json:"models,omitempty"`
 }
 
 func (o CatalogInfo) String() string {

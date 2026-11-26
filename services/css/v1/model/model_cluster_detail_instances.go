@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -37,6 +38,8 @@ type ClusterDetailInstances struct {
 
 	// 当前节点所属子网ID。
 	SubnetId *string `json:"subnetId,omitempty"`
+
+	Created *sdktime.SdkTime `json:"created,omitempty"`
 }
 
 func (o ClusterDetailInstances) String() string {

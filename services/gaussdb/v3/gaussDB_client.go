@@ -3533,27 +3533,6 @@ func (c *GaussDBClient) ShowLtsConfigsInvoker(request *model.ShowLtsConfigsReque
 	return &ShowLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowMigrateInfo 查询一键迁移信息
-//
-// 查询一键迁移到TaurusDB企业版的迁移信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) ShowMigrateInfo(request *model.ShowMigrateInfoRequest) (*model.ShowMigrateInfoResponse, error) {
-	requestDef := GenReqDefForShowMigrateInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowMigrateInfoResponse), nil
-	}
-}
-
-// ShowMigrateInfoInvoker 查询一键迁移信息
-func (c *GaussDBClient) ShowMigrateInfoInvoker(request *model.ShowMigrateInfoRequest) *ShowMigrateInfoInvoker {
-	requestDef := GenReqDefForShowMigrateInfo()
-	return &ShowMigrateInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowMultiTenant 查询多租特性开关状态
 //
 // 查询多租特性开关状态。

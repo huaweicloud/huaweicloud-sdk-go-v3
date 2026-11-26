@@ -14,6 +14,12 @@ type CheckPermissionResult struct {
 
 	// 错误信息
 	ErrorMessage *string `json:"error_message,omitempty"`
+
+	// 行过滤条件列表。
+	DataFilters *[]string `json:"data_filters,omitempty"`
+
+	// 列掩码条件列表。
+	DataMasks *[]DataMaskInfo `json:"data_masks,omitempty"`
 }
 
 func (o CheckPermissionResult) String() string {

@@ -18,7 +18,7 @@ type ListInstanceRequest struct {
 	// 返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 实例状态, Initial, Creating, Running, Unavailable
+	// 实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
 	Status *ListInstanceRequestStatus `json:"status,omitempty"`
 
 	// 企业项目ID
@@ -39,10 +39,14 @@ type ListInstanceRequestStatus struct {
 }
 
 type ListInstanceRequestStatusEnum struct {
-	INITIAL     ListInstanceRequestStatus
-	CREATING    ListInstanceRequestStatus
-	RUNNING     ListInstanceRequestStatus
-	UNAVAILABLE ListInstanceRequestStatus
+	INITIAL               ListInstanceRequestStatus
+	CREATING              ListInstanceRequestStatus
+	RUNNING               ListInstanceRequestStatus
+	UNAVAILABLE           ListInstanceRequestStatus
+	FROZEN                ListInstanceRequestStatus
+	DEPLOYMENT_ABNORMAL   ListInstanceRequestStatus
+	PARTIALLY_UNAVAILABLE ListInstanceRequestStatus
+	CORE_DIAL_FAILED      ListInstanceRequestStatus
 }
 
 func GetListInstanceRequestStatusEnum() ListInstanceRequestStatusEnum {
@@ -58,6 +62,18 @@ func GetListInstanceRequestStatusEnum() ListInstanceRequestStatusEnum {
 		},
 		UNAVAILABLE: ListInstanceRequestStatus{
 			value: "Unavailable",
+		},
+		FROZEN: ListInstanceRequestStatus{
+			value: "Frozen",
+		},
+		DEPLOYMENT_ABNORMAL: ListInstanceRequestStatus{
+			value: "DeploymentAbnormal",
+		},
+		PARTIALLY_UNAVAILABLE: ListInstanceRequestStatus{
+			value: "PartiallyUnavailable",
+		},
+		CORE_DIAL_FAILED: ListInstanceRequestStatus{
+			value: "CoreDialFailed",
 		},
 	}
 }

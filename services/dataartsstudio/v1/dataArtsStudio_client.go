@@ -3069,7 +3069,7 @@ func (c *DataArtsStudioClient) ListAllTablesInvoker(request *model.ListAllTables
 	return &ListAllTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApiCatalogList 获取当前目录下的api列表
+// ListApiCatalogList 获取当前目录下的API列表
 //
 // 获取当前目录下的API列表。
 //
@@ -3084,13 +3084,13 @@ func (c *DataArtsStudioClient) ListApiCatalogList(request *model.ListApiCatalogL
 	}
 }
 
-// ListApiCatalogListInvoker 获取当前目录下的api列表
+// ListApiCatalogListInvoker 获取当前目录下的API列表
 func (c *DataArtsStudioClient) ListApiCatalogListInvoker(request *model.ListApiCatalogListRequest) *ListApiCatalogListInvoker {
 	requestDef := GenReqDefForListApiCatalogList()
 	return &ListApiCatalogListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApiTopN 查询指定api 应用调用topN
+// ListApiTopN 查询指定API应用调用TopN
 //
 // 查询指定API应用调用TopN。
 //
@@ -3105,7 +3105,7 @@ func (c *DataArtsStudioClient) ListApiTopN(request *model.ListApiTopNRequest) (*
 	}
 }
 
-// ListApiTopNInvoker 查询指定api 应用调用topN
+// ListApiTopNInvoker 查询指定API应用调用TopN
 func (c *DataArtsStudioClient) ListApiTopNInvoker(request *model.ListApiTopNRequest) *ListApiTopNInvoker {
 	requestDef := GenReqDefForListApiTopN()
 	return &ListApiTopNInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3132,9 +3132,9 @@ func (c *DataArtsStudioClient) ListApicGroupsInvoker(request *model.ListApicGrou
 	return &ListApicGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApicInstances 获取网关实例(专享版)
+// ListApicInstances 获取网关实例（专享版）
 //
-// 获取网关实例(专享版)。
+// 获取网关实例（专享版）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListApicInstances(request *model.ListApicInstancesRequest) (*model.ListApicInstancesResponse, error) {
@@ -3147,13 +3147,13 @@ func (c *DataArtsStudioClient) ListApicInstances(request *model.ListApicInstance
 	}
 }
 
-// ListApicInstancesInvoker 获取网关实例(专享版)
+// ListApicInstancesInvoker 获取网关实例（专享版）
 func (c *DataArtsStudioClient) ListApicInstancesInvoker(request *model.ListApicInstancesRequest) *ListApicInstancesInvoker {
 	requestDef := GenReqDefForListApicInstances()
 	return &ListApicInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisTop 查询api 服务调用topN
+// ListApisTop 查询API服务调用TopN
 //
 // 查询API服务调用TopN。
 //
@@ -3168,7 +3168,7 @@ func (c *DataArtsStudioClient) ListApisTop(request *model.ListApisTopRequest) (*
 	}
 }
 
-// ListApisTopInvoker 查询api 服务调用topN
+// ListApisTopInvoker 查询API服务调用TopN
 func (c *DataArtsStudioClient) ListApisTopInvoker(request *model.ListApisTopRequest) *ListApisTopInvoker {
 	requestDef := GenReqDefForListApisTop()
 	return &ListApisTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3237,9 +3237,9 @@ func (c *DataArtsStudioClient) ListAppsInvoker(request *model.ListAppsRequest) *
 	return &ListAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAppsTop 查询app 服务使用topN
+// ListAppsTop 查询APP服务使用TopN
 //
-// 查询app 服务使用topN。
+// 查询APP服务使用TopN。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListAppsTop(request *model.ListAppsTopRequest) (*model.ListAppsTopResponse, error) {
@@ -3252,7 +3252,7 @@ func (c *DataArtsStudioClient) ListAppsTop(request *model.ListAppsTopRequest) (*
 	}
 }
 
-// ListAppsTopInvoker 查询app 服务使用topN
+// ListAppsTopInvoker 查询APP服务使用TopN
 func (c *DataArtsStudioClient) ListAppsTopInvoker(request *model.ListAppsTopRequest) *ListAppsTopInvoker {
 	requestDef := GenReqDefForListAppsTop()
 	return &ListAppsTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3529,6 +3529,27 @@ func (c *DataArtsStudioClient) ListDataArtsStudioInstances(request *model.ListDa
 func (c *DataArtsStudioClient) ListDataArtsStudioInstancesInvoker(request *model.ListDataArtsStudioInstancesRequest) *ListDataArtsStudioInstancesInvoker {
 	requestDef := GenReqDefForListDataArtsStudioInstances()
 	return &ListDataArtsStudioInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDataServiceApprovers 获取审批人列表
+//
+// 获取审批人列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDataServiceApprovers(request *model.ListDataServiceApproversRequest) (*model.ListDataServiceApproversResponse, error) {
+	requestDef := GenReqDefForListDataServiceApprovers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataServiceApproversResponse), nil
+	}
+}
+
+// ListDataServiceApproversInvoker 获取审批人列表
+func (c *DataArtsStudioClient) ListDataServiceApproversInvoker(request *model.ListDataServiceApproversRequest) *ListDataServiceApproversInvoker {
+	requestDef := GenReqDefForListDataServiceApprovers()
+	return &ListDataServiceApproversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDataServiceInstanceAccesslogs 查询数据服务集群访问日志列表
@@ -5066,7 +5087,7 @@ func (c *DataArtsStudioClient) ListWorkspaceusersInvoker(request *model.ListWork
 	return &ListWorkspaceusersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// MigrateApi 批量移动api至新目录
+// MigrateApi 批量移动API至新目录
 //
 // 批量移动API至新目录。
 //
@@ -5081,7 +5102,7 @@ func (c *DataArtsStudioClient) MigrateApi(request *model.MigrateApiRequest) (*mo
 	}
 }
 
-// MigrateApiInvoker 批量移动api至新目录
+// MigrateApiInvoker 批量移动API至新目录
 func (c *DataArtsStudioClient) MigrateApiInvoker(request *model.MigrateApiRequest) *MigrateApiInvoker {
 	requestDef := GenReqDefForMigrateApi()
 	return &MigrateApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5090,7 +5111,7 @@ func (c *DataArtsStudioClient) MigrateApiInvoker(request *model.MigrateApiReques
 // MigrateCatalog 移动当前目录至新目录
 //
 // 移动当前目录至新目录。
-// 移动目录的的同时会移动其下的所有子目录与api。
+// 移动目录的的同时会移动其下的所有子目录与API。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) MigrateCatalog(request *model.MigrateCatalogRequest) (*model.MigrateCatalogResponse, error) {
@@ -5571,7 +5592,7 @@ func (c *DataArtsStudioClient) SearchFieldsForRelationInvoker(request *model.Sea
 	return &SearchFieldsForRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchIdByPath 通过路径获取id
+// SearchIdByPath 通过路径获取ID
 //
 // 通过路径获取ID。
 //
@@ -5586,7 +5607,7 @@ func (c *DataArtsStudioClient) SearchIdByPath(request *model.SearchIdByPathReque
 	}
 }
 
-// SearchIdByPathInvoker 通过路径获取id
+// SearchIdByPathInvoker 通过路径获取ID
 func (c *DataArtsStudioClient) SearchIdByPathInvoker(request *model.SearchIdByPathRequest) *SearchIdByPathInvoker {
 	requestDef := GenReqDefForSearchIdByPath()
 	return &SearchIdByPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5718,7 +5739,7 @@ func (c *DataArtsStudioClient) ShowAggregationLogicTableByIdInvoker(request *mod
 	return &ShowAggregationLogicTableByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowApiDashboard 查询指定api 仪表板数据详情
+// ShowApiDashboard 查询指定API仪表板数据详情
 //
 // 查询指定API仪表板数据详情。
 //
@@ -5733,13 +5754,13 @@ func (c *DataArtsStudioClient) ShowApiDashboard(request *model.ShowApiDashboardR
 	}
 }
 
-// ShowApiDashboardInvoker 查询指定api 仪表板数据详情
+// ShowApiDashboardInvoker 查询指定API仪表板数据详情
 func (c *DataArtsStudioClient) ShowApiDashboardInvoker(request *model.ShowApiDashboardRequest) *ShowApiDashboardInvoker {
 	requestDef := GenReqDefForShowApiDashboard()
 	return &ShowApiDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowApisDashboard 查询api 仪表板数据详情
+// ShowApisDashboard 查询API仪表板数据详情
 //
 // 查询API仪表板数据详情。
 //
@@ -5754,13 +5775,13 @@ func (c *DataArtsStudioClient) ShowApisDashboard(request *model.ShowApisDashboar
 	}
 }
 
-// ShowApisDashboardInvoker 查询api 仪表板数据详情
+// ShowApisDashboardInvoker 查询API仪表板数据详情
 func (c *DataArtsStudioClient) ShowApisDashboardInvoker(request *model.ShowApisDashboardRequest) *ShowApisDashboardInvoker {
 	requestDef := GenReqDefForShowApisDashboard()
 	return &ShowApisDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowApisDetail 查询api 统计数据详情
+// ShowApisDetail 查询API统计数据详情
 //
 // 查询API统计数据详情。
 //
@@ -5775,7 +5796,7 @@ func (c *DataArtsStudioClient) ShowApisDetail(request *model.ShowApisDetailReque
 	}
 }
 
-// ShowApisDetailInvoker 查询api 统计数据详情
+// ShowApisDetailInvoker 查询API统计数据详情
 func (c *DataArtsStudioClient) ShowApisDetailInvoker(request *model.ShowApisDetailRequest) *ShowApisDetailInvoker {
 	requestDef := GenReqDefForShowApisDetail()
 	return &ShowApisDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5845,7 +5866,7 @@ func (c *DataArtsStudioClient) ShowApplyDetailInvoker(request *model.ShowApplyDe
 	return &ShowApplyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAppsDashboard 查询app 仪表板数据详情
+// ShowAppsDashboard 查询APP仪表板数据详情
 //
 // 查询APP仪表板数据详情。
 //
@@ -5860,13 +5881,13 @@ func (c *DataArtsStudioClient) ShowAppsDashboard(request *model.ShowAppsDashboar
 	}
 }
 
-// ShowAppsDashboardInvoker 查询app 仪表板数据详情
+// ShowAppsDashboardInvoker 查询APP仪表板数据详情
 func (c *DataArtsStudioClient) ShowAppsDashboardInvoker(request *model.ShowAppsDashboardRequest) *ShowAppsDashboardInvoker {
 	requestDef := GenReqDefForShowAppsDashboard()
 	return &ShowAppsDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAppsDetail 查询app 统计数据详情
+// ShowAppsDetail 查询APP统计数据详情
 //
 // 查询APP统计数据详情。
 //
@@ -5881,7 +5902,7 @@ func (c *DataArtsStudioClient) ShowAppsDetail(request *model.ShowAppsDetailReque
 	}
 }
 
-// ShowAppsDetailInvoker 查询app 统计数据详情
+// ShowAppsDetailInvoker 查询APP统计数据详情
 func (c *DataArtsStudioClient) ShowAppsDetailInvoker(request *model.ShowAppsDetailRequest) *ShowAppsDetailInvoker {
 	requestDef := GenReqDefForShowAppsDetail()
 	return &ShowAppsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -6811,7 +6832,7 @@ func (c *DataArtsStudioClient) ShowNodesInvoker(request *model.ShowNodesRequest)
 	return &ShowNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPathById 通过id获取路径
+// ShowPathById 通过ID获取路径
 //
 // 通过ID获取路径。
 //
@@ -6826,15 +6847,15 @@ func (c *DataArtsStudioClient) ShowPathById(request *model.ShowPathByIdRequest) 
 	}
 }
 
-// ShowPathByIdInvoker 通过id获取路径
+// ShowPathByIdInvoker 通过ID获取路径
 func (c *DataArtsStudioClient) ShowPathByIdInvoker(request *model.ShowPathByIdRequest) *ShowPathByIdInvoker {
 	requestDef := GenReqDefForShowPathById()
 	return &ShowPathByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPathObjectById 通过id获取路径对象
+// ShowPathObjectById 通过目录ID获取路径对象
 //
-// 通过目录id获取从根目录至当前目录链路上每一层的路径信息。
+// 通过目录ID获取从根目录至当前目录链路上每一层的路径信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowPathObjectById(request *model.ShowPathObjectByIdRequest) (*model.ShowPathObjectByIdResponse, error) {
@@ -6847,7 +6868,7 @@ func (c *DataArtsStudioClient) ShowPathObjectById(request *model.ShowPathObjectB
 	}
 }
 
-// ShowPathObjectByIdInvoker 通过id获取路径对象
+// ShowPathObjectByIdInvoker 通过目录ID获取路径对象
 func (c *DataArtsStudioClient) ShowPathObjectByIdInvoker(request *model.ShowPathObjectByIdRequest) *ShowPathObjectByIdInvoker {
 	requestDef := GenReqDefForShowPathObjectById()
 	return &ShowPathObjectByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -8345,9 +8366,9 @@ func (c *DataArtsStudioClient) UpdateWorkspaceInvoker(request *model.UpdateWorks
 	return &UpdateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AuthorizeActionApiToInstance API授权操作(授权/取消授权/申请/续约)
+// AuthorizeActionApiToInstance API授权操作（授权/取消授权/申请/续约）
 //
-// API授权操作(授权/取消授权/申请/续约)。
+// API授权操作（授权/取消授权/申请/续约）。
 // - API主动授权：  API审核人可发起，API主动授权成功后，在有效期内，APP即可访问该API。API授权包含授权和续约两部分功能。
 //     * 授权：授权会给予APP在有效期内访问API的权利。
 //     * 续约：续约会更新授权有效期，仅支持延长有效期，不能减少。
@@ -8369,13 +8390,13 @@ func (c *DataArtsStudioClient) AuthorizeActionApiToInstance(request *model.Autho
 	}
 }
 
-// AuthorizeActionApiToInstanceInvoker API授权操作(授权/取消授权/申请/续约)
+// AuthorizeActionApiToInstanceInvoker API授权操作（授权/取消授权/申请/续约）
 func (c *DataArtsStudioClient) AuthorizeActionApiToInstanceInvoker(request *model.AuthorizeActionApiToInstanceRequest) *AuthorizeActionApiToInstanceInvoker {
 	requestDef := GenReqDefForAuthorizeActionApiToInstance()
 	return &AuthorizeActionApiToInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AuthorizeApiToInstance 批量授权API(专享版)
+// AuthorizeApiToInstance 批量授权API（专享版）
 //
 // APP创建成功后，还不能访问API，如果想要访问某个API，需要将该API授权给APP。API主动授权成功后，在有效期内，APP即可访问该API。
 // API授权包含授权和续约两部分功能。
@@ -8393,7 +8414,7 @@ func (c *DataArtsStudioClient) AuthorizeApiToInstance(request *model.AuthorizeAp
 	}
 }
 
-// AuthorizeApiToInstanceInvoker 批量授权API(专享版)
+// AuthorizeApiToInstanceInvoker 批量授权API（专享版）
 func (c *DataArtsStudioClient) AuthorizeApiToInstanceInvoker(request *model.AuthorizeApiToInstanceRequest) *AuthorizeApiToInstanceInvoker {
 	requestDef := GenReqDefForAuthorizeApiToInstance()
 	return &AuthorizeApiToInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -8462,7 +8483,7 @@ func (c *DataArtsStudioClient) DeleteApiInvoker(request *model.DeleteApiRequest)
 	return &DeleteApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExecuteApiToInstance API操作(下线/停用/恢复)
+// ExecuteApiToInstance API操作（下线/停用/恢复）
 //
 // 下线API、停用API或恢复API。
 // - 下线API。将已发布的API下线。下线后，所有授权关系都会被解除，API将无法再被调用。
@@ -8483,13 +8504,13 @@ func (c *DataArtsStudioClient) ExecuteApiToInstance(request *model.ExecuteApiToI
 	}
 }
 
-// ExecuteApiToInstanceInvoker API操作(下线/停用/恢复)
+// ExecuteApiToInstanceInvoker API操作（下线/停用/恢复）
 func (c *DataArtsStudioClient) ExecuteApiToInstanceInvoker(request *model.ExecuteApiToInstanceRequest) *ExecuteApiToInstanceInvoker {
 	requestDef := GenReqDefForExecuteApiToInstance()
 	return &ExecuteApiToInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportDataServiceExcel 导出包含API信息的excel文件
+// ExportDataServiceExcel 导出包含API信息的EXCEL文件
 //
 // 导出包含API信息的EXCEL文件。
 //
@@ -8504,13 +8525,13 @@ func (c *DataArtsStudioClient) ExportDataServiceExcel(request *model.ExportDataS
 	}
 }
 
-// ExportDataServiceExcelInvoker 导出包含API信息的excel文件
+// ExportDataServiceExcelInvoker 导出包含API信息的EXCEL文件
 func (c *DataArtsStudioClient) ExportDataServiceExcelInvoker(request *model.ExportDataServiceExcelRequest) *ExportDataServiceExcelInvoker {
 	requestDef := GenReqDefForExportDataServiceExcel()
 	return &ExportDataServiceExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportDataServiceExcelTemplate 下载excel模板
+// ExportDataServiceExcelTemplate 下载EXCEL模板
 //
 // 下载EXCEL模板。
 //
@@ -8525,13 +8546,13 @@ func (c *DataArtsStudioClient) ExportDataServiceExcelTemplate(request *model.Exp
 	}
 }
 
-// ExportDataServiceExcelTemplateInvoker 下载excel模板
+// ExportDataServiceExcelTemplateInvoker 下载EXCEL模板
 func (c *DataArtsStudioClient) ExportDataServiceExcelTemplateInvoker(request *model.ExportDataServiceExcelTemplateRequest) *ExportDataServiceExcelTemplateInvoker {
 	requestDef := GenReqDefForExportDataServiceExcelTemplate()
 	return &ExportDataServiceExcelTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportDataServiceZip 全量导出包含API的excel压缩文件
+// ExportDataServiceZip 全量导出包含API的EXCEL压缩文件
 //
 // 全量导出包含API的EXCEL压缩文件。
 //
@@ -8546,13 +8567,13 @@ func (c *DataArtsStudioClient) ExportDataServiceZip(request *model.ExportDataSer
 	}
 }
 
-// ExportDataServiceZipInvoker 全量导出包含API的excel压缩文件
+// ExportDataServiceZipInvoker 全量导出包含API的EXCEL压缩文件
 func (c *DataArtsStudioClient) ExportDataServiceZipInvoker(request *model.ExportDataServiceZipRequest) *ExportDataServiceZipInvoker {
 	requestDef := GenReqDefForExportDataServiceZip()
 	return &ExportDataServiceZipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportDataServiceExcel 导入包含API信息的excel文件
+// ImportDataServiceExcel 导入包含API信息的EXCEL文件
 //
 // 导入包含API信息的EXCEL文件。
 //
@@ -8567,7 +8588,7 @@ func (c *DataArtsStudioClient) ImportDataServiceExcel(request *model.ImportDataS
 	}
 }
 
-// ImportDataServiceExcelInvoker 导入包含API信息的excel文件
+// ImportDataServiceExcelInvoker 导入包含API信息的EXCEL文件
 func (c *DataArtsStudioClient) ImportDataServiceExcelInvoker(request *model.ImportDataServiceExcelRequest) *ImportDataServiceExcelInvoker {
 	requestDef := GenReqDefForImportDataServiceExcel()
 	return &ImportDataServiceExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -8594,7 +8615,7 @@ func (c *DataArtsStudioClient) ListApisInvoker(request *model.ListApisRequest) *
 	return &ListApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstanceList 查看API不同操作对应的实例信息(专享版)
+// ListInstanceList 查看API不同操作对应的实例信息（专享版）
 //
 // 查看API不同操作对应的实例信息。
 //
@@ -8609,7 +8630,7 @@ func (c *DataArtsStudioClient) ListInstanceList(request *model.ListInstanceListR
 	}
 }
 
-// ListInstanceListInvoker 查看API不同操作对应的实例信息(专享版)
+// ListInstanceListInvoker 查看API不同操作对应的实例信息（专享版）
 func (c *DataArtsStudioClient) ListInstanceListInvoker(request *model.ListInstanceListRequest) *ListInstanceListInvoker {
 	requestDef := GenReqDefForListInstanceList()
 	return &ListInstanceListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -8639,7 +8660,7 @@ func (c *DataArtsStudioClient) PublishApiToInstanceInvoker(request *model.Publis
 	return &PublishApiToInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchDebugInfo 查看API调试信息(专享版)
+// SearchDebugInfo 查看API调试信息（专享版）
 //
 // 查看API在不同集群上的调试信息。
 //
@@ -8654,13 +8675,13 @@ func (c *DataArtsStudioClient) SearchDebugInfo(request *model.SearchDebugInfoReq
 	}
 }
 
-// SearchDebugInfoInvoker 查看API调试信息(专享版)
+// SearchDebugInfoInvoker 查看API调试信息（专享版）
 func (c *DataArtsStudioClient) SearchDebugInfoInvoker(request *model.SearchDebugInfoRequest) *SearchDebugInfoInvoker {
 	requestDef := GenReqDefForSearchDebugInfo()
 	return &SearchDebugInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchPublishInfo 查看API发布信息(专享版)
+// SearchPublishInfo 查看API发布信息（专享版）
 //
 // 查看API在不同集群上的发布信息。
 // API在集群上进行过操作后会存在发布信息，例如调试、注册类发布等。
@@ -8676,7 +8697,7 @@ func (c *DataArtsStudioClient) SearchPublishInfo(request *model.SearchPublishInf
 	}
 }
 
-// SearchPublishInfoInvoker 查看API发布信息(专享版)
+// SearchPublishInfoInvoker 查看API发布信息（专享版）
 func (c *DataArtsStudioClient) SearchPublishInfoInvoker(request *model.SearchPublishInfoRequest) *SearchPublishInfoInvoker {
 	requestDef := GenReqDefForSearchPublishInfo()
 	return &SearchPublishInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

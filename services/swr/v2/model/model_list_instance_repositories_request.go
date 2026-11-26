@@ -29,6 +29,18 @@ type ListInstanceRepositoriesRequest struct {
 
 	// 所属命名空间ID
 	NamespaceId *int32 `json:"namespace_id,omitempty"`
+
+	// 根据仓库名称或命名空间名称进行模糊查询
+	Name *string `json:"name,omitempty"`
+
+	// 是否返回仓库的标签
+	WithTag *bool `json:"with_tag,omitempty"`
+
+	// 根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+	Tags *string `json:"tags,omitempty"`
+
+	// 支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
+	NamespaceIds *string `json:"namespace_ids,omitempty"`
 }
 
 func (o ListInstanceRepositoriesRequest) String() string {

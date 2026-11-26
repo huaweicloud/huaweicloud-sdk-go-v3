@@ -12,6 +12,9 @@ type CreateInstanceNamespaceRequestBody struct {
 	NamespaceName string `json:"namespace_name"`
 
 	Metadata *NamespaceMetadata `json:"metadata"`
+
+	// 资源标签, 最多支持20个标签
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateInstanceNamespaceRequestBody) String() string {

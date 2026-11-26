@@ -22,10 +22,10 @@ type CertificatesPutBody struct {
 	CertificateName string `json:"certificate_name"`
 
 	// HTTPS协议使用的证书内容。  > PEM编码格式。
-	CertificateValue string `json:"certificate_value"`
+	CertificateValue *string `json:"certificate_value,omitempty"`
 
 	// HTTPS协议使用的私钥。  > PEM编码格式。
-	PrivateKey string `json:"private_key"`
+	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
 	EncCertificateValue *string `json:"enc_certificate_value,omitempty"`

@@ -12,10 +12,10 @@ import (
 // SourceWithPort 域名信息。
 type SourceWithPort struct {
 
-	// 加速域名id。
+	// **参数解释：** 加速域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 源站IP（非内网IP）或者域名。
+	// **参数解释：** 源站IP（非内网IP）或者域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
 	IpOrDomain string `json:"ip_or_domain"`
 
 	// 源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
@@ -27,14 +27,17 @@ type SourceWithPort struct {
 	// 主备状态（1代表主源站；0代表备源站）。
 	ActiveStandby int32 `json:"active_standby"`
 
-	// 是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+	// **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
 	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty"`
 
-	// HTTP端口，默认80
+	// **参数解释：** HTTP端口，默认80 **约束限制：** 不涉及 **取值范围：** 不涉及
 	HttpPort *int32 `json:"http_port,omitempty"`
 
-	// HTTPS端口，默认443
+	// **参数解释：** HTTPS端口，默认443 **约束限制：** 不涉及 **取值范围：** 不涉及
 	HttpsPort *int32 `json:"https_port,omitempty"`
+
+	// **参数解释：** 权重，值越大回源到该源站的次数越多。多个优先级相同的源站，由权重决定回源到各个源站的比例 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 50
+	Weight *int32 `json:"weight,omitempty"`
 }
 
 func (o SourceWithPort) String() string {

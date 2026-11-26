@@ -28,6 +28,9 @@ type IcebergStructField struct {
 
 	// 字段写入默认值, 在每次写入操作时生效，覆盖显式写入的null值。
 	WriteDefault *string `json:"write_default,omitempty"`
+
+	// 字段初始默认值, 用于为列创建前已存在的行返回的值，设置后不可更改。仅在Iceberg format-version 3及以上版本支持。
+	InitialDefault *string `json:"initial_default,omitempty"`
 }
 
 func (o IcebergStructField) String() string {

@@ -20,7 +20,16 @@ type ListFeatureGatesResponse struct {
 
 	// 是否支持制品清理
 	EnableArtifactGc *bool `json:"enableArtifactGc,omitempty"`
-	HttpStatusCode   int   `json:"-"`
+
+	// 仓库是否支持标签
+	EnableRepositoryTag *bool `json:"enableRepositoryTag,omitempty"`
+
+	// 创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+	EnableNamespaceTag *bool `json:"enableNamespaceTag,omitempty"`
+
+	// 是否支持查询制品的Manifest信息
+	EnableArtifactMetadata *bool `json:"enableArtifactMetadata,omitempty"`
+	HttpStatusCode         int   `json:"-"`
 }
 
 func (o ListFeatureGatesResponse) String() string {
