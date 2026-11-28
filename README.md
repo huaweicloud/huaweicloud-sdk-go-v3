@@ -855,6 +855,10 @@ Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects
 
 The endpoint being called will be queried from the [mapping table](./core/auth/internal/iam_endpoint.go), and if it cannot be found, the default value **https://iam.myhuaweicloud.com** will be used.
 
+The same selection applies to IdpId/IdTokenFile federation: both token exchange requests use the IAM endpoint mapped to the region passed to `WithRegion`, including when projectId/domainId is supplied explicitly or retrieved from the cache. Credential refreshes retain this region. An explicit credential endpoint takes precedence over `HUAWEICLOUD_SDK_IAM_ENDPOINT`, which takes precedence over the mapping table. If no region is configured, or the region has no mapping, the default endpoint above is used; the SDK does not construct an endpoint from the region name.
+
+This changes the federation default for mapped regions, which previously always used the default IAM endpoint. To retain that behavior, explicitly configure `https://iam.myhuaweicloud.com` using either option below.
+
 **European station users need to specify the endpoint as https://iam.eu-west-101.myhuaweicloud.eu**, you can modify the endpoint in the following two ways.
 
 ###### 3.3.1.1 Global scope [:top:](#user-manual-top)

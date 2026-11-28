@@ -49,6 +49,7 @@ type BaseCredentials struct {
 
 	derivedAuthServiceName string
 	regionId               string
+	iamRegionId            string
 	expireAt               int64
 }
 
@@ -70,10 +71,7 @@ func (s *BaseCredentials) needRefreshSts() bool {
 
 func (s *BaseCredentials) ProcessSts(client *impl.DefaultHttpClient) error {
 	if s.needRefreshSts() {
-		iamEndpoint := s.IamEndpoint
-		if iamEndpoint == "" {
-			iamEndpoint = internal.GetIamEndpoint()
-		}
+		iamEndpoint := s.selectIamEndpoint(s.iamRegionId)
 
 		cred, err := s.StsAccessor.GetCredential(
 			internal.WithClient(client),

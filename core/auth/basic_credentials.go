@@ -35,6 +35,7 @@ type BasicCredentials struct {
 }
 
 func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (ICredential, error) {
+	s.iamRegionId = region
 	if s.ProjectId != "" {
 		return s, nil
 	}
