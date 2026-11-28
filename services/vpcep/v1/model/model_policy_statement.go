@@ -3,6 +3,8 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"bytes"
+	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
@@ -35,6 +37,55 @@ func (o PolicyStatement) String() string {
 	}
 
 	return strings.Join([]string{"PolicyStatement", string(data)}, " ")
+}
+
+// UnmarshalJSON accepts both the single-string and the array-of-strings forms
+// of Action and Resource: gateway endpoints (OBS/SFS) return their default
+// full-access policy with a plain string, e.g. {"Effect": "Allow", "Action": "*"}.
+func (m *PolicyStatement) UnmarshalJSON(data []byte) error {
+	type PolicyStatementAlias PolicyStatement
+	aux := &struct {
+		Action   json.RawMessage `json:"Action"`
+		Resource json.RawMessage `json:"Resource"`
+		*PolicyStatementAlias
+	}{
+		PolicyStatementAlias: (*PolicyStatementAlias)(m),
+	}
+	if err := utils.Unmarshal(data, aux); err != nil {
+		return err
+	}
+
+	action, err := decodeStringOrStringSlice(aux.Action)
+	if err != nil {
+		return err
+	}
+	resource, err := decodeStringOrStringSlice(aux.Resource)
+	if err != nil {
+		return err
+	}
+	m.Action = action
+	m.Resource = resource
+	return nil
+}
+
+func decodeStringOrStringSlice(data []byte) ([]string, error) {
+	trimmed := bytes.TrimSpace(data)
+	if len(trimmed) == 0 || bytes.Equal(trimmed, []byte("null")) {
+		return nil, nil
+	}
+	if trimmed[0] == '"' {
+		var single string
+		if err := json.Unmarshal(trimmed, &single); err != nil {
+			return nil, err
+		}
+		return []string{single}, nil
+	}
+
+	var slice []string
+	if err := json.Unmarshal(trimmed, &slice); err != nil {
+		return nil, err
+	}
+	return slice, nil
 }
 
 type PolicyStatementEffect struct {
